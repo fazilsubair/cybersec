@@ -1,0 +1,9 @@
+CICADA\Administrator
+CICADA\Guest
+CICADA\krbtgt
+CICADA\CICADA-DC$
+CICADA\john.smoulder
+CICADA\sarah.dantelia
+CICADA\michael.wrightson
+CICADA\david.orelious
+CICADA\emily.oscars

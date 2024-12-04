@@ -1,0 +1,22 @@
+# Nmap 7.94SVN scan initiated Mon Sep 23 12:08:35 2024 as: nmap -vvv -p 80,22 -sCV -oA enum/trickster 10.10.11.34
+Nmap scan report for 10.10.11.34
+Host is up, received syn-ack (0.15s latency).
+Scanned at 2024-09-23 12:08:36 IST for 16s
+
+PORT   STATE SERVICE REASON  VERSION
+22/tcp open  ssh     syn-ack OpenSSH 8.9p1 Ubuntu 3ubuntu0.10 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   256 8c:01:0e:7b:b4:da:b7:2f:bb:2f:d3:a3:8c:a6:6d:87 (ECDSA)
+| ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBCk493Dw3qOjrvMEEvPT6uj4aIc7vb9chLLQr0Wzjiaf8hZ1yXMO6kwPuBjNaP6GouvFd0L7UnpacFnIqkQ9GOk=
+|   256 90:c6:f3:d8:3f:96:99:94:69:fe:d3:72:cb:fe:6c:c5 (ED25519)
+|_ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJ3pOUJRCVS6Y1fhIFs4QlMFAh2S8pCDFUCkAfaQFoJw
+80/tcp open  http    syn-ack Apache httpd 2.4.52
+|_http-title: Did not follow redirect to http://trickster.htb/
+|_http-server-header: Apache/2.4.52 (Ubuntu)
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+Service Info: Host: _; OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Mon Sep 23 12:08:52 2024 -- 1 IP address (1 host up) scanned in 16.64 seconds

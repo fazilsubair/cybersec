@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.94SVN scan initiated Mon Sep 23 12:08:35 2024 as: nmap -vvv -p 80,22 -sCV -oA enum/trickster 10.10.11.34 -->
+<nmaprun scanner="nmap" args="nmap -vvv -p 80,22 -sCV -oA enum/trickster 10.10.11.34" start="1727073515" startstr="Mon Sep 23 12:08:35 2024" version="7.94SVN" xmloutputversion="1.05">
+<scaninfo type="connect" protocol="tcp" numservices="2" services="22,80"/>
+<verbose level="3"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1727073516"/>
+<taskend task="NSE" time="1727073516"/>
+<taskbegin task="NSE" time="1727073516"/>
+<taskend task="NSE" time="1727073516"/>
+<taskbegin task="NSE" time="1727073516"/>
+<taskend task="NSE" time="1727073516"/>
+<taskbegin task="Ping Scan" time="1727073516"/>
+<hosthint><status state="up" reason="unknown-response" reason_ttl="0"/>
+<address addr="10.10.11.34" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<taskend task="Ping Scan" time="1727073516" extrainfo="1 total hosts"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1727073516"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1727073516"/>
+<taskbegin task="Connect Scan" time="1727073516"/>
+<taskend task="Connect Scan" time="1727073516" extrainfo="2 total ports"/>
+<taskbegin task="Service scan" time="1727073516"/>
+<taskend task="Service scan" time="1727073522" extrainfo="2 services on 1 host"/>
+<taskbegin task="NSE" time="1727073522"/>
+<taskend task="NSE" time="1727073531"/>
+<taskbegin task="NSE" time="1727073531"/>
+<taskend task="NSE" time="1727073532"/>
+<taskbegin task="NSE" time="1727073532"/>
+<taskend task="NSE" time="1727073532"/>
+<host starttime="1727073516" endtime="1727073532"><status state="up" reason="syn-ack" reason_ttl="0"/>
+<address addr="10.10.11.34" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="ssh" product="OpenSSH" version="8.9p1 Ubuntu 3ubuntu0.10" extrainfo="Ubuntu Linux; protocol 2.0" ostype="Linux" method="probed" conf="10"><cpe>cpe:/a:openbsd:openssh:8.9p1</cpe><cpe>cpe:/o:linux:linux_kernel</cpe></service><script id="ssh-hostkey" output="&#xa;  256 8c:01:0e:7b:b4:da:b7:2f:bb:2f:d3:a3:8c:a6:6d:87 (ECDSA)&#xa;ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBCk493Dw3qOjrvMEEvPT6uj4aIc7vb9chLLQr0Wzjiaf8hZ1yXMO6kwPuBjNaP6GouvFd0L7UnpacFnIqkQ9GOk=&#xa;  256 90:c6:f3:d8:3f:96:99:94:69:fe:d3:72:cb:fe:6c:c5 (ED25519)&#xa;ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJ3pOUJRCVS6Y1fhIFs4QlMFAh2S8pCDFUCkAfaQFoJw"><table>
+<elem key="type">ecdsa-sha2-nistp256</elem>
+<elem key="key">AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBCk493Dw3qOjrvMEEvPT6uj4aIc7vb9chLLQr0Wzjiaf8hZ1yXMO6kwPuBjNaP6GouvFd0L7UnpacFnIqkQ9GOk=</elem>
+<elem key="bits">256</elem>
+<elem key="fingerprint">8c010e7bb4dab72fbb2fd3a38ca66d87</elem>
+</table>
+<table>
+<elem key="type">ssh-ed25519</elem>
+<elem key="key">AAAAC3NzaC1lZDI1NTE5AAAAIJ3pOUJRCVS6Y1fhIFs4QlMFAh2S8pCDFUCkAfaQFoJw</elem>
+<elem key="bits">256</elem>
+<elem key="fingerprint">90c6f3d83f96999469fed372cbfe6cc5</elem>
+</table>
+</script></port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" product="Apache httpd" version="2.4.52" hostname="_" method="probed" conf="10"><cpe>cpe:/a:apache:http_server:2.4.52</cpe></service><script id="http-title" output="Did not follow redirect to http://trickster.htb/"><elem key="redirect_url">http://trickster.htb/</elem>
+</script><script id="http-server-header" output="Apache/2.4.52 (Ubuntu)"><elem>Apache/2.4.52 (Ubuntu)</elem>
+</script><script id="http-methods" output="&#xa;  Supported Methods: GET HEAD POST OPTIONS"><table key="Supported Methods">
+<elem>GET</elem>
+<elem>HEAD</elem>
+<elem>POST</elem>
+<elem>OPTIONS</elem>
+</table>
+</script></port>
+</ports>
+<times srtt="153306" rttvar="124888" to="652858"/>
+</host>
+<taskbegin task="NSE" time="1727073532"/>
+<taskend task="NSE" time="1727073532"/>
+<taskbegin task="NSE" time="1727073532"/>
+<taskend task="NSE" time="1727073532"/>
+<taskbegin task="NSE" time="1727073532"/>
+<taskend task="NSE" time="1727073532"/>
+<runstats><finished time="1727073532" timestr="Mon Sep 23 12:08:52 2024" summary="Nmap done at Mon Sep 23 12:08:52 2024; 1 IP address (1 host up) scanned in 16.64 seconds" elapsed="16.64" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

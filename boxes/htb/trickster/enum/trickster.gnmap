@@ -1,0 +1,5 @@
+# Nmap 7.94SVN scan initiated Mon Sep 23 12:08:35 2024 as: nmap -vvv -p 80,22 -sCV -oA enum/trickster 10.10.11.34
+# Ports scanned: TCP(2;22,80) UDP(0;) SCTP(0;) PROTOCOLS(0;)
+Host: 10.10.11.34 ()	Status: Up
+Host: 10.10.11.34 ()	Ports: 22/open/tcp//ssh//OpenSSH 8.9p1 Ubuntu 3ubuntu0.10 (Ubuntu Linux; protocol 2.0)/, 80/open/tcp//http//Apache httpd 2.4.52/
+# Nmap done at Mon Sep 23 12:08:52 2024 -- 1 IP address (1 host up) scanned in 16.64 seconds

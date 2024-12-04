@@ -1,0 +1,12 @@
+/home/xot/Desktop/boxes/htb/lantern/xpl_project/xpl/bin/release/net6.0/xpl.deps.json
+/home/xot/Desktop/boxes/htb/lantern/xpl_project/xpl/bin/release/net6.0/xpl.dll
+/home/xot/Desktop/boxes/htb/lantern/xpl_project/xpl/bin/release/net6.0/xpl.pdb
+/home/xot/Desktop/boxes/htb/lantern/xpl_project/xpl/obj/release/net6.0/xpl.csproj.AssemblyReference.cache
+/home/xot/Desktop/boxes/htb/lantern/xpl_project/xpl/obj/release/net6.0/xpl.GeneratedMSBuildEditorConfig.editorconfig
+/home/xot/Desktop/boxes/htb/lantern/xpl_project/xpl/obj/release/net6.0/xpl.AssemblyInfoInputs.cache
+/home/xot/Desktop/boxes/htb/lantern/xpl_project/xpl/obj/release/net6.0/xpl.AssemblyInfo.cs
+/home/xot/Desktop/boxes/htb/lantern/xpl_project/xpl/obj/release/net6.0/xpl.csproj.CoreCompileInputs.cache
+/home/xot/Desktop/boxes/htb/lantern/xpl_project/xpl/obj/release/net6.0/xpl.dll
+/home/xot/Desktop/boxes/htb/lantern/xpl_project/xpl/obj/release/net6.0/refint/xpl.dll
+/home/xot/Desktop/boxes/htb/lantern/xpl_project/xpl/obj/release/net6.0/xpl.pdb
+/home/xot/Desktop/boxes/htb/lantern/xpl_project/xpl/obj/release/net6.0/ref/xpl.dll

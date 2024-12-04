@@ -1,0 +1,5 @@
+# Nmap 7.94SVN scan initiated Thu Sep 19 09:36:28 2024 as: nmap -vvv -p 22,80,8080 -sCV -oA enum/caption 10.10.11.33
+# Ports scanned: TCP(3;22,80,8080) UDP(0;) SCTP(0;) PROTOCOLS(0;)
+Host: 10.10.11.33 ()	Status: Up
+Host: 10.10.11.33 ()	Ports: 22/open/tcp//ssh//OpenSSH 8.9p1 Ubuntu 3ubuntu0.10 (Ubuntu Linux; protocol 2.0)/, 80/open/tcp//http///, 8080/open/tcp//http-proxy///
+# Nmap done at Thu Sep 19 09:36:49 2024 -- 1 IP address (1 host up) scanned in 21.40 seconds

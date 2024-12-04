@@ -1,0 +1,2 @@
+echo "it works" ;' id;#
+127.0.0.1 "user-agent":"';whoami;#"

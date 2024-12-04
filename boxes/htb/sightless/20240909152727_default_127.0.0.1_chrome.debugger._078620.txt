@@ -1,0 +1,63 @@
+<html><head><meta name="color-scheme" content="light dark"></head><body><pre style="word-wrap: break-word; white-space: pre-wrap;">#!/usr/bin/python3
+from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.chrome.service import Service
+from selenium.webdriver.common.by import By
+from selenium.webdriver.common.keys import Keys
+from selenium.common.exceptions import UnexpectedAlertPresentException
+from selenium.common.exceptions import NoAlertPresentException
+from selenium.webdriver.common.alert import Alert
+from selenium.webdriver.support import expected_conditions as EC
+import time
+import threading
+import schedule
+
+options = Options()
+options.add_argument('--headless')
+options.add_argument('--no-sandbox')
+options.add_argument('--disable-dev-shm-usage')
+
+# Update this line with the path to your locally downloaded Chrome driver
+chrome_driver_path = '/home/john/automation/chromedriver'
+
+# Use Service to specify the Chrome driver binary path
+service = Service(chrome_driver_path)
+service.start()
+
+driver = webdriver.Chrome(service=service, options=options)
+
+def dismiss_all_alerts(driver):
+    while True:
+        try:
+            alert = driver.switch_to.alert
+            print(f"Dismissed alert with text: {alert.text}")
+            alert.accept()
+            time.sleep(1)
+        except NoAlertPresentException:
+            break
+
+print("browser opened")
+while True:
+    try:
+        driver.get("http://admin.sightless.htb:8080/admin_logger.php?page=log")
+        time.sleep(7)
+
+        # Username Field
+        input_element = driver.find_element(By.ID, "loginname")
+        input_element.send_keys("admin")
+
+        # Password field
+        input_element = driver.find_element(By.ID, "password")
+        input_element.send_keys("ForlorfroxAdmin" + Keys.ENTER)
+        print("Logged In...")
+    except UnexpectedAlertPresentException:
+        input_element.send_keys(Keys.ENTER)
+        pass
+    time.sleep(5)
+    dismiss_all_alerts(driver)
+    driver.get("http://admin.sightless.htb:8080/admin_index.php?action=logout")
+    driver.get("http://admin.sightless.htb:8080/")
+    print("Logged Out")
+    time.sleep(3)
+    #driver.close()
+</pre></body></html>

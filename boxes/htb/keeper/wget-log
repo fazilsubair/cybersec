@@ -1,0 +1,12 @@
+--2024-02-23 14:55:53--  http://10.10.11.227:8000/RT30000.zip
+Connecting to 10.10.11.227:8000... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 87391651 (83M) [application/zip]
+Saving to: ‘RT30000.zip.1’
+
+RT30000.zip.1                             2%[=>                                                                           ]   2.43M   239KB/s    eta 7m 30s RT30000.zip.1                             3%[=>                                                                           ]   2.52M   241KB/s    eta 7m 7s  RT30000.zip.1                             3%[=>                                                                           ]   2.60M   241KB/s    eta 7m 7s  RT30000.zip.1                             3%[=>                                                                           ]   2.64M   237KB/s    eta 7m 7s  RT30000.zip.1                             3%[=>                                                                           ]   2.75M   258KB/s    eta 7m 7s  RT30000.zip.1                             3%[=>                                                                           ]   2.80M   251KB/s    eta 6m 55s RT30000.zip.1                             3%[=>                                                                           ]   2.87M   261KB/s    eta 6m 55s RT30000.zip.1                             3%[=>                                                                           ]   2.92M   244KB/s    eta 6m 55s RT30000.zip.1                             3%[=>                                                                           ]   3.03M   268KB/s    eta 6m 55s RT30000.zip.1                             3%[=>                                                                           ]   3.05M   261KB/s    eta 6m 49s RT30000.zip.1                             3%[=>                                                                           ]   3.11M   259KB/s    eta 6m 49s RT30000.zip.1                             3%[=>                                                                           ]   3.13M   259KB/s    in 16s     
+
+2024-02-23 14:56:09 (201 KB/s) - Connection closed at byte 3278832. Retrying.
+
+--2024-02-23 14:56:10--  (try: 2)  http://10.10.11.227:8000/RT30000.zip
+Connecting to 10.10.11.227:8000... failed: Connection refused.

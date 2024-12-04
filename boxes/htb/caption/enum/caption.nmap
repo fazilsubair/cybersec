@@ -1,0 +1,175 @@
+# Nmap 7.94SVN scan initiated Thu Sep 19 09:36:28 2024 as: nmap -vvv -p 22,80,8080 -sCV -oA enum/caption 10.10.11.33
+Nmap scan report for 10.10.11.33
+Host is up, received syn-ack (0.053s latency).
+Scanned at 2024-09-19 09:36:28 IST for 21s
+
+PORT     STATE SERVICE    REASON  VERSION
+22/tcp   open  ssh        syn-ack OpenSSH 8.9p1 Ubuntu 3ubuntu0.10 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   256 3e:ea:45:4b:c5:d1:6d:6f:e2:d4:d1:3b:0a:3d:a9:4f (ECDSA)
+| ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBJ+m7rYl1vRtnm789pH3IRhxI4CNCANVj+N5kovboNzcw9vHsBwvPX3KYA3cxGbKiA0VqbKRpOHnpsMuHEXEVJc=
+|   256 64:cc:75:de:4a:e6:a5:b4:73:eb:3f:1b:cf:b4:e3:94 (ED25519)
+|_ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIOtuEdoYxTohG80Bo6YCqSzUY9+qbnAFnhsk4yAZNqhM
+80/tcp   open  http       syn-ack
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-title: Did not follow redirect to http://caption.htb
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, DNSVersionBindReqTCP, Help, RPCCheck, RTSPRequest, X11Probe: 
+|     HTTP/1.1 400 Bad request
+|     Content-length: 90
+|     Cache-Control: no-cache
+|     Connection: close
+|     Content-Type: text/html
+|     <html><body><h1>400 Bad request</h1>
+|     Your browser sent an invalid request.
+|     </body></html>
+|   FourOhFourRequest, GetRequest, HTTPOptions: 
+|     HTTP/1.1 301 Moved Permanently
+|     content-length: 0
+|     location: http://caption.htb
+|_    connection: close
+8080/tcp open  http-proxy syn-ack
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-title: GitBucket
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.1 404 Not Found
+|     Date: Thu, 19 Sep 2024 03:55:54 GMT
+|     Set-Cookie: JSESSIONID=node01nxwairxxcoag148s14knl3ni185394.node0; Path=/; HttpOnly
+|     Expires: Thu, 01 Jan 1970 00:00:00 GMT
+|     Content-Type: text/html;charset=utf-8
+|     Content-Length: 5916
+|     <!DOCTYPE html>
+|     <html prefix="og: http://ogp.me/ns#" lang="en">
+|     <head>
+|     <meta charset="UTF-8" />
+|     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+|     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+|     <title>Error</title>
+|     <meta property="og:title" content="Error" />
+|     <meta property="og:type" content="object" />
+|     <meta property="og:url" content="http://10.10.11.33:8080/nice%20ports%2C/Tri%6Eity.txt%2ebak" />
+|     <meta property="og:image" content="http://10.10.11.33:8080/assets/common/images/gitbucket_ogp.png" />
+|     <link rel="icon" href="/assets/common/imag
+|   GetRequest: 
+|     HTTP/1.1 200 OK
+|     Date: Thu, 19 Sep 2024 03:55:54 GMT
+|     Set-Cookie: JSESSIONID=node0o7c65x1oyoz4qr40es4n2ebf185392.node0; Path=/; HttpOnly
+|     Expires: Thu, 01 Jan 1970 00:00:00 GMT
+|     Content-Type: text/html;charset=utf-8
+|     Content-Length: 7982
+|     <!DOCTYPE html>
+|     <html prefix="og: http://ogp.me/ns#" lang="en">
+|     <head>
+|     <meta charset="UTF-8" />
+|     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+|     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+|     <title>GitBucket</title>
+|     <meta property="og:title" content="GitBucket" />
+|     <meta property="og:type" content="object" />
+|     <meta property="og:url" content="http://10.10.11.33:8080/" />
+|     <meta property="og:image" content="http://10.10.11.33:8080/assets/common/images/gitbucket_ogp.png" />
+|     <link rel="icon" href="/assets/common/images/gitbucket.png?20240918212605" ty
+|   HTTPOptions: 
+|     HTTP/1.1 200 OK
+|     Date: Thu, 19 Sep 2024 03:55:54 GMT
+|     Set-Cookie: JSESSIONID=node01ao1v5xatmo7rtg3jt7wd4mwl185393.node0; Path=/; HttpOnly
+|     Expires: Thu, 01 Jan 1970 00:00:00 GMT
+|     Content-Type: text/html;charset=utf-8
+|     Allow: GET,HEAD,POST,OPTIONS
+|     Content-Length: 0
+|   RTSPRequest: 
+|     HTTP/1.1 505 HTTP Version Not Supported
+|     Content-Type: text/html;charset=iso-8859-1
+|     Content-Length: 58
+|     Connection: close
+|_    <h1>Bad Message 505</h1><pre>reason: Unknown Version</pre>
+2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port80-TCP:V=7.94SVN%I=7%D=9/19%Time=66EBA34A%P=x86_64-pc-linux-gnu%r(G
+SF:etRequest,66,"HTTP/1\.1\x20301\x20Moved\x20Permanently\r\ncontent-lengt
+SF:h:\x200\r\nlocation:\x20http://caption\.htb\r\nconnection:\x20close\r\n
+SF:\r\n")%r(HTTPOptions,66,"HTTP/1\.1\x20301\x20Moved\x20Permanently\r\nco
+SF:ntent-length:\x200\r\nlocation:\x20http://caption\.htb\r\nconnection:\x
+SF:20close\r\n\r\n")%r(RTSPRequest,CF,"HTTP/1\.1\x20400\x20Bad\x20request\
+SF:r\nContent-length:\x2090\r\nCache-Control:\x20no-cache\r\nConnection:\x
+SF:20close\r\nContent-Type:\x20text/html\r\n\r\n<html><body><h1>400\x20Bad
+SF:\x20request</h1>\nYour\x20browser\x20sent\x20an\x20invalid\x20request\.
+SF:\n</body></html>\n")%r(X11Probe,CF,"HTTP/1\.1\x20400\x20Bad\x20request\
+SF:r\nContent-length:\x2090\r\nCache-Control:\x20no-cache\r\nConnection:\x
+SF:20close\r\nContent-Type:\x20text/html\r\n\r\n<html><body><h1>400\x20Bad
+SF:\x20request</h1>\nYour\x20browser\x20sent\x20an\x20invalid\x20request\.
+SF:\n</body></html>\n")%r(FourOhFourRequest,66,"HTTP/1\.1\x20301\x20Moved\
+SF:x20Permanently\r\ncontent-length:\x200\r\nlocation:\x20http://caption\.
+SF:htb\r\nconnection:\x20close\r\n\r\n")%r(RPCCheck,CF,"HTTP/1\.1\x20400\x
+SF:20Bad\x20request\r\nContent-length:\x2090\r\nCache-Control:\x20no-cache
+SF:\r\nConnection:\x20close\r\nContent-Type:\x20text/html\r\n\r\n<html><bo
+SF:dy><h1>400\x20Bad\x20request</h1>\nYour\x20browser\x20sent\x20an\x20inv
+SF:alid\x20request\.\n</body></html>\n")%r(DNSVersionBindReqTCP,CF,"HTTP/1
+SF:\.1\x20400\x20Bad\x20request\r\nContent-length:\x2090\r\nCache-Control:
+SF:\x20no-cache\r\nConnection:\x20close\r\nContent-Type:\x20text/html\r\n\
+SF:r\n<html><body><h1>400\x20Bad\x20request</h1>\nYour\x20browser\x20sent\
+SF:x20an\x20invalid\x20request\.\n</body></html>\n")%r(DNSStatusRequestTCP
+SF:,CF,"HTTP/1\.1\x20400\x20Bad\x20request\r\nContent-length:\x2090\r\nCac
+SF:he-Control:\x20no-cache\r\nConnection:\x20close\r\nContent-Type:\x20tex
+SF:t/html\r\n\r\n<html><body><h1>400\x20Bad\x20request</h1>\nYour\x20brows
+SF:er\x20sent\x20an\x20invalid\x20request\.\n</body></html>\n")%r(Help,CF,
+SF:"HTTP/1\.1\x20400\x20Bad\x20request\r\nContent-length:\x2090\r\nCache-C
+SF:ontrol:\x20no-cache\r\nConnection:\x20close\r\nContent-Type:\x20text/ht
+SF:ml\r\n\r\n<html><body><h1>400\x20Bad\x20request</h1>\nYour\x20browser\x
+SF:20sent\x20an\x20invalid\x20request\.\n</body></html>\n");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port8080-TCP:V=7.94SVN%I=7%D=9/19%Time=66EBA34A%P=x86_64-pc-linux-gnu%r
+SF:(GetRequest,201F,"HTTP/1\.1\x20200\x20OK\r\nDate:\x20Thu,\x2019\x20Sep\
+SF:x202024\x2003:55:54\x20GMT\r\nSet-Cookie:\x20JSESSIONID=node0o7c65x1oyo
+SF:z4qr40es4n2ebf185392\.node0;\x20Path=/;\x20HttpOnly\r\nExpires:\x20Thu,
+SF:\x2001\x20Jan\x201970\x2000:00:00\x20GMT\r\nContent-Type:\x20text/html;
+SF:charset=utf-8\r\nContent-Length:\x207982\r\n\r\n<!DOCTYPE\x20html>\n<ht
+SF:ml\x20prefix=\"og:\x20http://ogp\.me/ns#\"\x20lang=\"en\">\n\x20\x20<he
+SF:ad>\n\x20\x20\x20\x20<meta\x20charset=\"UTF-8\"\x20/>\n\x20\x20\x20\x20
+SF:<meta\x20name=\"viewport\"\x20content=\"width=device-width,\x20initial-
+SF:scale=1\.0,\x20maximum-scale=5\.0\"\x20/>\n\x20\x20\x20\x20<meta\x20htt
+SF:p-equiv=\"X-UA-Compatible\"\x20content=\"IE=edge\"\x20/>\n\x20\x20\x20\
+SF:x20<title>GitBucket</title>\n\x20\x20\x20\x20<meta\x20property=\"og:tit
+SF:le\"\x20content=\"GitBucket\"\x20/>\n\x20\x20\x20\x20<meta\x20property=
+SF:\"og:type\"\x20content=\"object\"\x20/>\n\x20\x20\x20\x20<meta\x20prope
+SF:rty=\"og:url\"\x20content=\"http://10\.10\.11\.33:8080/\"\x20/>\n\x20\x
+SF:20\x20\x20\n\x20\x20\x20\x20\x20\x20<meta\x20property=\"og:image\"\x20c
+SF:ontent=\"http://10\.10\.11\.33:8080/assets/common/images/gitbucket_ogp\
+SF:.png\"\x20/>\n\x20\x20\x20\x20\n\x20\x20\x20\x20\n\x20\x20\x20\x20<link
+SF:\x20rel=\"icon\"\x20href=\"/assets/common/images/gitbucket\.png\?202409
+SF:18212605\"\x20ty")%r(HTTPOptions,10D,"HTTP/1\.1\x20200\x20OK\r\nDate:\x
+SF:20Thu,\x2019\x20Sep\x202024\x2003:55:54\x20GMT\r\nSet-Cookie:\x20JSESSI
+SF:ONID=node01ao1v5xatmo7rtg3jt7wd4mwl185393\.node0;\x20Path=/;\x20HttpOnl
+SF:y\r\nExpires:\x20Thu,\x2001\x20Jan\x201970\x2000:00:00\x20GMT\r\nConten
+SF:t-Type:\x20text/html;charset=utf-8\r\nAllow:\x20GET,HEAD,POST,OPTIONS\r
+SF:\nContent-Length:\x200\r\n\r\n")%r(RTSPRequest,B8,"HTTP/1\.1\x20505\x20
+SF:HTTP\x20Version\x20Not\x20Supported\r\nContent-Type:\x20text/html;chars
+SF:et=iso-8859-1\r\nContent-Length:\x2058\r\nConnection:\x20close\r\n\r\n<
+SF:h1>Bad\x20Message\x20505</h1><pre>reason:\x20Unknown\x20Version</pre>")
+SF:%r(FourOhFourRequest,1815,"HTTP/1\.1\x20404\x20Not\x20Found\r\nDate:\x2
+SF:0Thu,\x2019\x20Sep\x202024\x2003:55:54\x20GMT\r\nSet-Cookie:\x20JSESSIO
+SF:NID=node01nxwairxxcoag148s14knl3ni185394\.node0;\x20Path=/;\x20HttpOnly
+SF:\r\nExpires:\x20Thu,\x2001\x20Jan\x201970\x2000:00:00\x20GMT\r\nContent
+SF:-Type:\x20text/html;charset=utf-8\r\nContent-Length:\x205916\r\n\r\n<!D
+SF:OCTYPE\x20html>\n<html\x20prefix=\"og:\x20http://ogp\.me/ns#\"\x20lang=
+SF:\"en\">\n\x20\x20<head>\n\x20\x20\x20\x20<meta\x20charset=\"UTF-8\"\x20
+SF:/>\n\x20\x20\x20\x20<meta\x20name=\"viewport\"\x20content=\"width=devic
+SF:e-width,\x20initial-scale=1\.0,\x20maximum-scale=5\.0\"\x20/>\n\x20\x20
+SF:\x20\x20<meta\x20http-equiv=\"X-UA-Compatible\"\x20content=\"IE=edge\"\
+SF:x20/>\n\x20\x20\x20\x20<title>Error</title>\n\x20\x20\x20\x20<meta\x20p
+SF:roperty=\"og:title\"\x20content=\"Error\"\x20/>\n\x20\x20\x20\x20<meta\
+SF:x20property=\"og:type\"\x20content=\"object\"\x20/>\n\x20\x20\x20\x20<m
+SF:eta\x20property=\"og:url\"\x20content=\"http://10\.10\.11\.33:8080/nice
+SF:%20ports%2C/Tri%6Eity\.txt%2ebak\"\x20/>\n\x20\x20\x20\x20\n\x20\x20\x2
+SF:0\x20\x20\x20<meta\x20property=\"og:image\"\x20content=\"http://10\.10\
+SF:.11\.33:8080/assets/common/images/gitbucket_ogp\.png\"\x20/>\n\x20\x20\
+SF:x20\x20\n\x20\x20\x20\x20\n\x20\x20\x20\x20<link\x20rel=\"icon\"\x20hre
+SF:f=\"/assets/common/imag");
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Thu Sep 19 09:36:49 2024 -- 1 IP address (1 host up) scanned in 21.40 seconds
