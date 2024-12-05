@@ -4,3 +4,9 @@ boxes/htb/challenges/Reminiscent/reminiscent/flounder-pc-memdump.elf filter=lfs 
 boxes/htb/challenges/Reminiscent/Reminiscent.zip filter=lfs diff=lfs merge=lfs -text
 boxes/htb/keeper/KeePassDumpFull.dmp filter=lfs diff=lfs merge=lfs -text
 boxes/tools/genymotion-3.8.0-linux_x64.bin filter=lfs diff=lfs merge=lfs -text
+*.bin filter=lfs diff=lfs merge=lfs -text
+*.elf filter=lfs diff=lfs merge=lfs -text
+*.raw filter=lfs diff=lfs merge=lfs -text
+*.zip filter=lfs diff=lfs merge=lfs -text
+*.dmp filter=lfs diff=lfs merge=lfs -text
+*.jar filter=lfs diff=lfs merge=lfs -text
