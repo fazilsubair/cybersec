@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.94SVN scan initiated Thu Dec 12 12:19:58 2024 as: /usr/lib/nmap/nmap -&#45;privileged -vvv -p 22,8080 -sCV -oA inital 10.10.243.18 -->
+<nmaprun scanner="nmap" args="/usr/lib/nmap/nmap -&#45;privileged -vvv -p 22,8080 -sCV -oA inital 10.10.243.18" start="1733986198" startstr="Thu Dec 12 12:19:58 2024" version="7.94SVN" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="2" services="22,8080"/>
+<verbose level="3"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1733986199"/>
+<taskend task="NSE" time="1733986199"/>
+<taskbegin task="NSE" time="1733986199"/>
+<taskend task="NSE" time="1733986199"/>
+<taskbegin task="NSE" time="1733986199"/>
+<taskend task="NSE" time="1733986199"/>
+<taskbegin task="Ping Scan" time="1733986199"/>
+<hosthint><status state="up" reason="unknown-response" reason_ttl="0"/>
+<address addr="10.10.243.18" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<taskend task="Ping Scan" time="1733986200" extrainfo="1 total hosts"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1733986200"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1733986200"/>
+<taskbegin task="SYN Stealth Scan" time="1733986200"/>
+<taskend task="SYN Stealth Scan" time="1733986200" extrainfo="2 total ports"/>
+<taskbegin task="Service scan" time="1733986200"/>
+<taskend task="Service scan" time="1733986307" extrainfo="2 services on 1 host"/>
+<taskbegin task="NSE" time="1733986307"/>
+<taskend task="NSE" time="1733986316"/>
+<taskbegin task="NSE" time="1733986316"/>
+<taskend task="NSE" time="1733986319"/>
+<taskbegin task="NSE" time="1733986319"/>
+<taskend task="NSE" time="1733986319"/>
+<host starttime="1733986200" endtime="1733986319"><status state="up" reason="reset" reason_ttl="61"/>
+<address addr="10.10.243.18" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="61"/><service name="ssh" product="OpenSSH" version="8.2p1 Ubuntu 4ubuntu0.9" extrainfo="Ubuntu Linux; protocol 2.0" ostype="Linux" method="probed" conf="10"><cpe>cpe:/a:openbsd:openssh:8.2p1</cpe><cpe>cpe:/o:linux:linux_kernel</cpe></service><script id="ssh-hostkey" output="&#xa;  3072 b2:54:8c:e2:d7:67:ab:8f:90:b3:6f:52:c2:73:37:69 (RSA)&#xa;ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDZ5yrbM4EUF9kvSfSmVTdRWGVeqTTpQpwFopgW7iFN3f/I3mBWiJpAGL8Q8rEs7n8ESeN0yRcr1lGSuUtRqk5Mwei9edFIAGFC0uEJMnO7EQl/3O8PAlTGeuIaEg+YItzpmXOIWfslh0oftoQNN0iWouJFj7DU5QtoiuwK9GIDwD54aaJ6QQHu16nYYk0fTmA2szzSy0nL0fG1I+ILOnVf1SEyDu5a+uHSKA4lERXWsJ6KDhEtxAuf1+uk8x33I4ERJQsGEZ/GbFJsPxbWhFgyvRE9cScm+YpeppPBMwbvicnEg+MZLuDfXAzYCsDvXPem8io/8QlqHXAyTb/hfw8twUiLuWRHPuHH6E4tq+cztlD/BsfydBn+72TEB7dZnRnWP4tAnI5au2KiPA1RA3ud3JNn7Ha7iU0AA5MK9gKhSv/S5tDyLhFbAcLm8ByWzdJ1R5F8NIlWG8C9VDgDuixmIQwsV4D7FthMTsDaM5PuJHr5GDOfT56Mn3fGxQT2W4k=&#xa;  256 14:29:ec:36:95:e5:64:49:39:3f:b4:ec:ca:5f:ee:78 (ECDSA)&#xa;ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBKVWb4NfXmP4f5RQIvXlrggi/9cDARgYazfJpJFlRhH/Ypg/QO6JQ0cj+BInTq4qjv9q5f1ksX0KLJxT2sc95WI=&#xa;  256 19:eb:1f:c9:67:92:01:61:0c:14:fe:71:4b:0d:50:40 (ED25519)&#xa;ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIHQ5WIN3vZO9KIDXb+PpV5yqA3SVieIqn8jSOGdjDHm1"><table>
+<elem key="key">AAAAB3NzaC1yc2EAAAADAQABAAABgQDZ5yrbM4EUF9kvSfSmVTdRWGVeqTTpQpwFopgW7iFN3f/I3mBWiJpAGL8Q8rEs7n8ESeN0yRcr1lGSuUtRqk5Mwei9edFIAGFC0uEJMnO7EQl/3O8PAlTGeuIaEg+YItzpmXOIWfslh0oftoQNN0iWouJFj7DU5QtoiuwK9GIDwD54aaJ6QQHu16nYYk0fTmA2szzSy0nL0fG1I+ILOnVf1SEyDu5a+uHSKA4lERXWsJ6KDhEtxAuf1+uk8x33I4ERJQsGEZ/GbFJsPxbWhFgyvRE9cScm+YpeppPBMwbvicnEg+MZLuDfXAzYCsDvXPem8io/8QlqHXAyTb/hfw8twUiLuWRHPuHH6E4tq+cztlD/BsfydBn+72TEB7dZnRnWP4tAnI5au2KiPA1RA3ud3JNn7Ha7iU0AA5MK9gKhSv/S5tDyLhFbAcLm8ByWzdJ1R5F8NIlWG8C9VDgDuixmIQwsV4D7FthMTsDaM5PuJHr5GDOfT56Mn3fGxQT2W4k=</elem>
+<elem key="fingerprint">b2548ce2d767ab8f90b36f52c2733769</elem>
+<elem key="bits">3072</elem>
+<elem key="type">ssh-rsa</elem>
+</table>
+<table>
+<elem key="key">AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBKVWb4NfXmP4f5RQIvXlrggi/9cDARgYazfJpJFlRhH/Ypg/QO6JQ0cj+BInTq4qjv9q5f1ksX0KLJxT2sc95WI=</elem>
+<elem key="fingerprint">1429ec3695e56449393fb4ecca5fee78</elem>
+<elem key="bits">256</elem>
+<elem key="type">ecdsa-sha2-nistp256</elem>
+</table>
+<table>
+<elem key="key">AAAAC3NzaC1lZDI1NTE5AAAAIHQ5WIN3vZO9KIDXb+PpV5yqA3SVieIqn8jSOGdjDHm1</elem>
+<elem key="fingerprint">19eb1fc9679201610c14fe714b0d5040</elem>
+<elem key="bits">256</elem>
+<elem key="type">ssh-ed25519</elem>
+</table>
+</script></port>
+<port protocol="tcp" portid="8080"><state state="open" reason="syn-ack" reason_ttl="61"/><service name="http-proxy" product="Werkzeug/3.0.1 Python/3.8.10" servicefp="SF-Port8080-TCP:V=7.94SVN%I=7%D=12/12%Time=675A879F%P=x86_64-pc-linux-gnu%r(GetRequest,726,&quot;HTTP/1\.1\x20200\x20OK\r\nServer:\x20Werkzeug/3\.0\.1\x20Python/3\.8\.10\r\nDate:\x20Thu,\x2012\x20Dec\x202024\x2006:50:39\x20GMT\r\nContent-Type:\x20text/html;\x20charset=utf-8\r\nContent-Length:\x201655\r\nConnection:\x20close\r\n\r\n&lt;!DOCTYPE\x20html&gt;\n&lt;html&gt;\n&lt;head&gt;\n\x20\x20\x20\x20&lt;title&gt;Cat\x20Sticker\x20Shop&lt;/title&gt;\n\x20\x20\x20\x20&lt;style&gt;\n\x20\x20\x20\x20\x20\x20\x20\x20body\x20{\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20font-family:\x20Arial,\x20sans-serif;\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20margin:\x200;\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20padding:\x200;\n\x20\x20\x20\x20\x20\x20\x20\x20}\n\x20\x20\x20\x20\x20\x20\x20\x20header\x20{\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20background-color:\x20#333;\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20color:\x20#fff;\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20text-align:\x20center;\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20padding:\x2010px;\n\x20\x20\x20\x20\x20\x20\x20\x20}\n\x20\x20\x20\x20\x20\x20\x20\x20header\x20ul\x20{\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20list-style:\x20none;\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20padding:\x200;\n\x20\x20\x20\x20\x20\x20\x20\x20}\n\x20\x20\x20\x20\x20\x20\x20\x20header\x20li\x20{\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20display:\x20inline;\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20margin-right:\x2020px;\n\x20\x20\x20\x20\x20\x20\x20\x20}\n\x20\x20\x20\x20\x20\x20\x20\x20header\x20a\x20{\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20text-decoration:\x20none;\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20color:\x20#fff;\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20font-weight:\x20bold;\n\x20\x20\x20\x20\x20\x20\x20\x20}\n\x20\x20\x20\x20\x20\x20\x20\x20\.content\x20{\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20padding:\x2020px;\n\x20\x20\x20\x20\x20\x20\x20\x20}\n\x20\x20\x20\x20\x20\x20\x20\x20\.product\x20{\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20bo&quot;);" method="probed" conf="10"/><script id="http-methods" output="&#xa;  Supported Methods: HEAD GET OPTIONS"><table key="Supported Methods">
+<elem>HEAD</elem>
+<elem>GET</elem>
+<elem>OPTIONS</elem>
+</table>
+</script><script id="http-server-header" output="Werkzeug/3.0.1 Python/3.8.10"><elem>Werkzeug/3.0.1 Python/3.8.10</elem>
+</script><script id="http-title" output="Cat Sticker Shop"><elem key="title">Cat Sticker Shop</elem>
+</script><script id="fingerprint-strings" output="&#xa;  GetRequest: &#xa;    HTTP/1.1 200 OK&#xa;    Server: Werkzeug/3.0.1 Python/3.8.10&#xa;    Date: Thu, 12 Dec 2024 06:50:39 GMT&#xa;    Content-Type: text/html; charset=utf-8&#xa;    Content-Length: 1655&#xa;    Connection: close&#xa;    &lt;!DOCTYPE html&gt;&#xa;    &lt;html&gt;&#xa;    &lt;head&gt;&#xa;    &lt;title&gt;Cat Sticker Shop&lt;/title&gt;&#xa;    &lt;style&gt;&#xa;    body {&#xa;    font-family: Arial, sans-serif;&#xa;    margin: 0;&#xa;    padding: 0;&#xa;    header {&#xa;    background-color: #333;&#xa;    color: #fff;&#xa;    text-align: center;&#xa;    padding: 10px;&#xa;    header ul {&#xa;    list-style: none;&#xa;    padding: 0;&#xa;    header li {&#xa;    display: inline;&#xa;    margin-right: 20px;&#xa;    header a {&#xa;    text-decoration: none;&#xa;    color: #fff;&#xa;    font-weight: bold;&#xa;    .content {&#xa;    padding: 20px;&#xa;    .product {"><elem key="GetRequest">&#xa;    HTTP/1.1 200 OK&#xa;    Server: Werkzeug/3.0.1 Python/3.8.10&#xa;    Date: Thu, 12 Dec 2024 06:50:39 GMT&#xa;    Content-Type: text/html; charset=utf-8&#xa;    Content-Length: 1655&#xa;    Connection: close&#xa;    &lt;!DOCTYPE html&gt;&#xa;    &lt;html&gt;&#xa;    &lt;head&gt;&#xa;    &lt;title&gt;Cat Sticker Shop&lt;/title&gt;&#xa;    &lt;style&gt;&#xa;    body {&#xa;    font-family: Arial, sans-serif;&#xa;    margin: 0;&#xa;    padding: 0;&#xa;    header {&#xa;    background-color: #333;&#xa;    color: #fff;&#xa;    text-align: center;&#xa;    padding: 10px;&#xa;    header ul {&#xa;    list-style: none;&#xa;    padding: 0;&#xa;    header li {&#xa;    display: inline;&#xa;    margin-right: 20px;&#xa;    header a {&#xa;    text-decoration: none;&#xa;    color: #fff;&#xa;    font-weight: bold;&#xa;    .content {&#xa;    padding: 20px;&#xa;    .product {</elem>
+</script></port>
+</ports>
+<times srtt="339242" rttvar="195674" to="1121938"/>
+</host>
+<taskbegin task="NSE" time="1733986319"/>
+<taskend task="NSE" time="1733986319"/>
+<taskbegin task="NSE" time="1733986319"/>
+<taskend task="NSE" time="1733986319"/>
+<taskbegin task="NSE" time="1733986319"/>
+<taskend task="NSE" time="1733986319"/>
+<runstats><finished time="1733986319" timestr="Thu Dec 12 12:21:59 2024" summary="Nmap done at Thu Dec 12 12:21:59 2024; 1 IP address (1 host up) scanned in 121.12 seconds" elapsed="121.12" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>
