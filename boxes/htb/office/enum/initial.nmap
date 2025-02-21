@@ -1,0 +1,82 @@
+# Nmap 7.94SVN scan initiated Mon Jan  6 12:56:37 2025 as: /usr/lib/nmap/nmap --privileged -vvv -p 53,80,88,139,389,445,443,464,636,593,3268,3269,5985,9389,49664,49669,51142,51149,51170,60594 -sCV -oA enum/initial 10.129.230.226
+Nmap scan report for 10.129.230.226
+Host is up, received echo-reply ttl 127 (0.22s latency).
+Scanned at 2025-01-06 12:56:38 IST for 104s
+
+PORT      STATE    SERVICE          REASON          VERSION
+53/tcp    open     domain           syn-ack ttl 127 Simple DNS Plus
+80/tcp    open     http             syn-ack ttl 127 Apache httpd 2.4.56 ((Win64) OpenSSL/1.1.1t PHP/8.0.28)
+|_http-server-header: Apache/2.4.56 (Win64) OpenSSL/1.1.1t PHP/8.0.28
+| http-robots.txt: 16 disallowed entries 
+| /joomla/administrator/ /administrator/ /api/ /bin/ 
+| /cache/ /cli/ /components/ /includes/ /installation/ 
+|_/language/ /layouts/ /libraries/ /logs/ /modules/ /plugins/ /tmp/
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-favicon: Unknown favicon MD5: 1B6942E22443109DAEA739524AB74123
+|_http-title: Home
+|_http-generator: Joomla! - Open Source Content Management
+88/tcp    filtered kerberos-sec     no-response
+139/tcp   open     netbios-ssn      syn-ack ttl 127 Microsoft Windows netbios-ssn
+389/tcp   filtered ldap             no-response
+443/tcp   open     ssl/http         syn-ack ttl 127 Apache httpd 2.4.56 (OpenSSL/1.1.1t PHP/8.0.28)
+|_http-title: 403 Forbidden
+|_http-server-header: Apache/2.4.56 (Win64) OpenSSL/1.1.1t PHP/8.0.28
+|_ssl-date: TLS randomness does not represent time
+| tls-alpn: 
+|_  http/1.1
+| ssl-cert: Subject: commonName=localhost
+| Issuer: commonName=localhost
+| Public Key type: rsa
+| Public Key bits: 1024
+| Signature Algorithm: sha1WithRSAEncryption
+| Not valid before: 2009-11-10T23:48:47
+| Not valid after:  2019-11-08T23:48:47
+| MD5:   a0a4:4cc9:9e84:b26f:9e63:9f9e:d229:dee0
+| SHA-1: b023:8c54:7a90:5bfa:119c:4e8b:acca:eacf:3649:1ff6
+| -----BEGIN CERTIFICATE-----
+| MIIBnzCCAQgCCQC1x1LJh4G1AzANBgkqhkiG9w0BAQUFADAUMRIwEAYDVQQDEwls
+| b2NhbGhvc3QwHhcNMDkxMTEwMjM0ODQ3WhcNMTkxMTA4MjM0ODQ3WjAUMRIwEAYD
+| VQQDEwlsb2NhbGhvc3QwgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBAMEl0yfj
+| 7K0Ng2pt51+adRAj4pCdoGOVjx1BmljVnGOMW3OGkHnMw9ajibh1vB6UfHxu463o
+| J1wLxgxq+Q8y/rPEehAjBCspKNSq+bMvZhD4p8HNYMRrKFfjZzv3ns1IItw46kgT
+| gDpAl1cMRzVGPXFimu5TnWMOZ3ooyaQ0/xntAgMBAAEwDQYJKoZIhvcNAQEFBQAD
+| gYEAavHzSWz5umhfb/MnBMa5DL2VNzS+9whmmpsDGEG+uR0kM1W2GQIdVHHJTyFd
+| aHXzgVJBQcWTwhp84nvHSiQTDBSaT6cQNQpvag/TaED/SEQpm0VqDFwpfFYuufBL
+| vVNbLkKxbK2XwUvu0RxoLdBMC/89HqrZ0ppiONuQ+X2MtxE=
+|_-----END CERTIFICATE-----
+445/tcp   open     microsoft-ds?    syn-ack ttl 127
+464/tcp   open     kpasswd5?        syn-ack ttl 127
+593/tcp   filtered http-rpc-epmap   no-response
+636/tcp   filtered ldapssl          no-response
+3268/tcp  filtered globalcatLDAP    no-response
+3269/tcp  filtered globalcatLDAPssl no-response
+5985/tcp  filtered wsman            no-response
+9389/tcp  filtered adws             no-response
+49664/tcp open     msrpc            syn-ack ttl 127 Microsoft Windows RPC
+49669/tcp filtered unknown          no-response
+51142/tcp open     ncacn_http       syn-ack ttl 127 Microsoft Windows RPC over HTTP 1.0
+51149/tcp open     msrpc            syn-ack ttl 127 Microsoft Windows RPC
+51170/tcp open     msrpc            syn-ack ttl 127 Microsoft Windows RPC
+60594/tcp filtered unknown          no-response
+Service Info: Host: www.example.com; OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+| p2p-conficker: 
+|   Checking for Conficker.C or higher...
+|   Check 1 (port 42824/tcp): CLEAN (Timeout)
+|   Check 2 (port 52881/tcp): CLEAN (Timeout)
+|   Check 3 (port 59956/udp): CLEAN (Timeout)
+|   Check 4 (port 57169/udp): CLEAN (Timeout)
+|_  0/4 checks are positive: Host is CLEAN or ports are blocked
+|_clock-skew: 8h00m02s
+| smb2-security-mode: 
+|   3:1:1: 
+|_    Message signing enabled and required
+| smb2-time: 
+|   date: 2025-01-06T15:27:44
+|_  start_date: N/A
+
+Read data files from: /usr/share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Mon Jan  6 12:58:22 2025 -- 1 IP address (1 host up) scanned in 105.15 seconds

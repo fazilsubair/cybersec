@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.94SVN scan initiated Tue Jan 21 14:13:46 2025 as: /usr/lib/nmap/nmap -&#45;privileged -vvv -p 22,443,8000 -sCV -oA enum/initial 10.129.248.17 -->
+<nmaprun scanner="nmap" args="/usr/lib/nmap/nmap -&#45;privileged -vvv -p 22,443,8000 -sCV -oA enum/initial 10.129.248.17" start="1737449026" startstr="Tue Jan 21 14:13:46 2025" version="7.94SVN" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="3" services="22,443,8000"/>
+<verbose level="3"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1737449027"/>
+<taskend task="NSE" time="1737449027"/>
+<taskbegin task="NSE" time="1737449027"/>
+<taskend task="NSE" time="1737449027"/>
+<taskbegin task="NSE" time="1737449027"/>
+<taskend task="NSE" time="1737449027"/>
+<taskbegin task="Ping Scan" time="1737449027"/>
+<hosthint><status state="up" reason="unknown-response" reason_ttl="0"/>
+<address addr="10.129.248.17" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<taskend task="Ping Scan" time="1737449027" extrainfo="1 total hosts"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1737449027"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1737449027"/>
+<taskbegin task="SYN Stealth Scan" time="1737449027"/>
+<taskend task="SYN Stealth Scan" time="1737449028" extrainfo="3 total ports"/>
+<taskbegin task="Service scan" time="1737449028"/>
+<taskend task="Service scan" time="1737449041" extrainfo="3 services on 1 host"/>
+<taskbegin task="NSE" time="1737449041"/>
+<taskend task="NSE" time="1737449052"/>
+<taskbegin task="NSE" time="1737449052"/>
+<taskend task="NSE" time="1737449055"/>
+<taskbegin task="NSE" time="1737449055"/>
+<taskend task="NSE" time="1737449055"/>
+<host starttime="1737449027" endtime="1737449055"><status state="up" reason="syn-ack" reason_ttl="63"/>
+<address addr="10.129.248.17" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="ssh" product="OpenSSH" version="9.2p1 Debian 2+deb12u4" extrainfo="protocol 2.0" ostype="Linux" method="probed" conf="10"><cpe>cpe:/a:openbsd:openssh:9.2p1</cpe><cpe>cpe:/o:linux:linux_kernel</cpe></service><script id="ssh-hostkey" output="&#xa;  256 7d:6b:ba:b6:25:48:77:ac:3a:a2:ef:ae:f5:1d:98:c4 (ECDSA)&#xa;ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBJuxaL9aCVxiQGLRxQPezW3dkgouskvb/BcBJR16VYjHElq7F8C2ByzUTNr0OMeiwft8X5vJaD9GBqoEul4D1QE=&#xa;  256 be:f3:27:9e:c6:d6:29:27:7b:98:18:91:4e:97:25:99 (ED25519)&#xa;ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIA2oT7Hn4aUiSdg4vO9rJIbVSVKcOVKozd838ZStpwj8"><table>
+<elem key="type">ecdsa-sha2-nistp256</elem>
+<elem key="key">AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBJuxaL9aCVxiQGLRxQPezW3dkgouskvb/BcBJR16VYjHElq7F8C2ByzUTNr0OMeiwft8X5vJaD9GBqoEul4D1QE=</elem>
+<elem key="bits">256</elem>
+<elem key="fingerprint">7d6bbab6254877ac3aa2efaef51d98c4</elem>
+</table>
+<table>
+<elem key="type">ssh-ed25519</elem>
+<elem key="key">AAAAC3NzaC1lZDI1NTE5AAAAIA2oT7Hn4aUiSdg4vO9rJIbVSVKcOVKozd838ZStpwj8</elem>
+<elem key="bits">256</elem>
+<elem key="fingerprint">bef3279ec6d629277b9818914e972599</elem>
+</table>
+</script></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="http" product="nginx" version="1.22.1" tunnel="ssl" method="probed" conf="10"><cpe>cpe:/a:igor_sysoev:nginx:1.22.1</cpe></service><script id="tls-alpn" output="&#xa;  http/1.1&#xa;  http/1.0&#xa;  http/0.9"><elem>http/1.1</elem>
+<elem>http/1.0</elem>
+<elem>http/0.9</elem>
+</script><script id="http-title" output="404 Not Found"><elem key="title">404 Not Found</elem>
+</script><script id="ssl-cert" output="Subject: commonName=127.0.0.1/stateOrProvinceName=/countryName=US/localityName=/postalCode=4952/streetAddress=&#xa;Subject Alternative Name: IP Address:127.0.0.1&#xa;Issuer: commonName=127.0.0.1/stateOrProvinceName=/countryName=US/localityName=/postalCode=4952/streetAddress=&#xa;Public Key type: rsa&#xa;Public Key bits: 2048&#xa;Signature Algorithm: sha256WithRSAEncryption&#xa;Not valid before: 2024-10-22T16:31:06&#xa;Not valid after:  2027-10-22T16:31:06&#xa;MD5:   4f8d:54f0:9ff9:d805:8e06:b757:b707:469f&#xa;SHA-1: 03bd:f990:8435:aa06:4046:a25f:18ac:285f:59bf:ec87&#xa;-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIIDnzCCAoegAwIBAgIRAIICACIZf/wV1k5ZizZwrOAwDQYJKoZIhvcNAQELBQAw&#xa;UTELMAkGA1UEBhMCVVMxCTAHBgNVBAgTADEJMAcGA1UEBxMAMQkwBwYDVQQJEwAx&#xa;DTALBgNVBBETBDQ5NTIxEjAQBgNVBAMTCTEyNy4wLjAuMTAeFw0yNDEwMjIxNjMx&#xa;MDZaFw0yNzEwMjIxNjMxMDZaMFExCzAJBgNVBAYTAlVTMQkwBwYDVQQIEwAxCTAH&#xa;BgNVBAcTADEJMAcGA1UECRMAMQ0wCwYDVQQREwQ0OTUyMRIwEAYDVQQDEwkxMjcu&#xa;MC4wLjEwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQC8vYaBYoWT9WBn&#xa;GBQwQUgYPBQ+NGnDnLJ3M+V5cHYzFByoyTRHDza7QcIp7d6oGJhzDJW1ntWd2a/L&#xa;lFU+mc+UFhz9qB40p6qjG4MBM+tKxnmc+SW521stFfW4MoxlXsS0e7YxrNfTnx8V&#xa;tiobm95/mrRDMNBbrDAPtRiZiJZhBPUrSLltyQKuPya9Bpdpwffo2soRpGkaP3VK&#xa;y8ZDzSyiL5lxVRtKPWArFVbKDq9lZSljIgdy/rDRYmJxMtuNaaCO45tLhxI8IPrO&#xa;CRvHdGMR9tNIMn4MWfdwrpVtYtzNRKBaQ6+hPhF9xgB8GcDoOzik+JvBvvV7NeCF&#xa;AQrJU+/HAgMBAAGjcjBwMA4GA1UdDwEB/wQEAwICpDAdBgNVHSUEFjAUBggrBgEF&#xa;BQcDAQYIKwYBBQUHAwIwDwYDVR0TAQH/BAUwAwEB/zAdBgNVHQ4EFgQUV89fr+lL&#xa;oPhQ8izsUuCnt5gz76MwDwYDVR0RBAgwBocEfwAAATANBgkqhkiG9w0BAQsFAAOC&#xa;AQEAiMlp0U61FmrChvDGER4BpY/XmHzvd9HGr7xToOAWwGHKhAXO9D0HXnYE60H9&#xa;OtKLr4MfvrFDtPU/QRowRqYgPZhrH5Z+m5tzFwGApf7fKKvxzGIMXZwhTzz1i8N3&#xa;inNJyQiNJv29YZgesZtXo/IKnXZWiQtLjihYvpHFAE4pn2NW7USGRgOOa0csvYit&#xa;WqYIjXnLBYowvydNpbwFraD+JShMMoPV86Ug8KaK5amoAKgw8fAG+nJjh7R3rTyZ&#xa;4J4TbB0gerRDoHVpfVHfB6s47zOnlSN5t+zBAMTtUSQvG9ivv5YP/k8IAZAYHPvI&#xa;n3PclSsJzErq4fCpiriNlMCtKw==&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;"><table key="subject">
+<elem key="commonName">127.0.0.1</elem>
+<elem key="countryName">US</elem>
+<elem key="localityName"></elem>
+<elem key="postalCode">4952</elem>
+<elem key="stateOrProvinceName"></elem>
+<elem key="streetAddress"></elem>
+</table>
+<table key="issuer">
+<elem key="commonName">127.0.0.1</elem>
+<elem key="countryName">US</elem>
+<elem key="localityName"></elem>
+<elem key="postalCode">4952</elem>
+<elem key="stateOrProvinceName"></elem>
+<elem key="streetAddress"></elem>
+</table>
+<table key="pubkey">
+<elem key="type">rsa</elem>
+<elem key="bits">2048</elem>
+<elem key="modulus">BCBD8681628593F560671814304148183C143E3469C39CB27733E579707633141CA8C934470F36BB41C229EDDEA81898730C95B59ED59DD9AFCB94553E99CF94161CFDA81E34A7AAA31B830133EB4AC6799CF925B9DB5B2D15F5B8328C655EC4B47BB631ACD7D39F1F15B62A1B9BDE7F9AB44330D05BAC300FB5189988966104F52B48B96DC902AE3F26BD069769C1F7E8DACA11A4691A3F754ACBC643CD2CA22F9971551B4A3D602B1556CA0EAF65652963220772FEB0D162627132DB8D69A08EE39B4B87123C20FACE091BC7746311F6D348327E0C59F770AE956D62DCCD44A05A43AFA13E117DC6007C19C0E83B38A4F89BC1BEF57B35E085010AC953EFC7</elem>
+<elem key="exponent">65537</elem>
+</table>
+<table key="extensions">
+<table>
+<elem key="name">X509v3 Key Usage</elem>
+<elem key="value">Digital Signature, Key Encipherment, Certificate Sign</elem>
+<elem key="critical">true</elem>
+</table>
+<table>
+<elem key="name">X509v3 Extended Key Usage</elem>
+<elem key="value">TLS Web Server Authentication, TLS Web Client Authentication</elem>
+</table>
+<table>
+<elem key="name">X509v3 Basic Constraints</elem>
+<elem key="value">CA:TRUE</elem>
+<elem key="critical">true</elem>
+</table>
+<table>
+<elem key="name">X509v3 Subject Key Identifier</elem>
+<elem key="value">57:CF:5F:AF:E9:4B:A0:F8:50:F2:2C:EC:52:E0:A7:B7:98:33:EF:A3</elem>
+</table>
+<table>
+<elem key="name">X509v3 Subject Alternative Name</elem>
+<elem key="value">IP Address:127.0.0.1</elem>
+</table>
+</table>
+<elem key="sig_algo">sha256WithRSAEncryption</elem>
+<table key="validity">
+<elem key="notBefore">2024-10-22T16:31:06</elem>
+<elem key="notAfter">2027-10-22T16:31:06</elem>
+</table>
+<elem key="md5">4f8d54f09ff9d8058e06b757b707469f</elem>
+<elem key="sha1">03bdf9908435aa064046a25f18ac285f59bfec87</elem>
+<elem key="pem">-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIIDnzCCAoegAwIBAgIRAIICACIZf/wV1k5ZizZwrOAwDQYJKoZIhvcNAQELBQAw&#xa;UTELMAkGA1UEBhMCVVMxCTAHBgNVBAgTADEJMAcGA1UEBxMAMQkwBwYDVQQJEwAx&#xa;DTALBgNVBBETBDQ5NTIxEjAQBgNVBAMTCTEyNy4wLjAuMTAeFw0yNDEwMjIxNjMx&#xa;MDZaFw0yNzEwMjIxNjMxMDZaMFExCzAJBgNVBAYTAlVTMQkwBwYDVQQIEwAxCTAH&#xa;BgNVBAcTADEJMAcGA1UECRMAMQ0wCwYDVQQREwQ0OTUyMRIwEAYDVQQDEwkxMjcu&#xa;MC4wLjEwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQC8vYaBYoWT9WBn&#xa;GBQwQUgYPBQ+NGnDnLJ3M+V5cHYzFByoyTRHDza7QcIp7d6oGJhzDJW1ntWd2a/L&#xa;lFU+mc+UFhz9qB40p6qjG4MBM+tKxnmc+SW521stFfW4MoxlXsS0e7YxrNfTnx8V&#xa;tiobm95/mrRDMNBbrDAPtRiZiJZhBPUrSLltyQKuPya9Bpdpwffo2soRpGkaP3VK&#xa;y8ZDzSyiL5lxVRtKPWArFVbKDq9lZSljIgdy/rDRYmJxMtuNaaCO45tLhxI8IPrO&#xa;CRvHdGMR9tNIMn4MWfdwrpVtYtzNRKBaQ6+hPhF9xgB8GcDoOzik+JvBvvV7NeCF&#xa;AQrJU+/HAgMBAAGjcjBwMA4GA1UdDwEB/wQEAwICpDAdBgNVHSUEFjAUBggrBgEF&#xa;BQcDAQYIKwYBBQUHAwIwDwYDVR0TAQH/BAUwAwEB/zAdBgNVHQ4EFgQUV89fr+lL&#xa;oPhQ8izsUuCnt5gz76MwDwYDVR0RBAgwBocEfwAAATANBgkqhkiG9w0BAQsFAAOC&#xa;AQEAiMlp0U61FmrChvDGER4BpY/XmHzvd9HGr7xToOAWwGHKhAXO9D0HXnYE60H9&#xa;OtKLr4MfvrFDtPU/QRowRqYgPZhrH5Z+m5tzFwGApf7fKKvxzGIMXZwhTzz1i8N3&#xa;inNJyQiNJv29YZgesZtXo/IKnXZWiQtLjihYvpHFAE4pn2NW7USGRgOOa0csvYit&#xa;WqYIjXnLBYowvydNpbwFraD+JShMMoPV86Ug8KaK5amoAKgw8fAG+nJjh7R3rTyZ&#xa;4J4TbB0gerRDoHVpfVHfB6s47zOnlSN5t+zBAMTtUSQvG9ivv5YP/k8IAZAYHPvI&#xa;n3PclSsJzErq4fCpiriNlMCtKw==&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;</elem>
+</script><script id="ssl-date" output="TLS randomness does not represent time"></script><script id="http-server-header" output="nginx/1.22.1"><elem>nginx/1.22.1</elem>
+</script></port>
+<port protocol="tcp" portid="8000"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="http" product="nginx" version="1.22.1" method="probed" conf="10"><cpe>cpe:/a:igor_sysoev:nginx:1.22.1</cpe></service><script id="http-methods" output="&#xa;  Supported Methods: GET HEAD POST"><table key="Supported Methods">
+<elem>GET</elem>
+<elem>HEAD</elem>
+<elem>POST</elem>
+</table>
+</script><script id="http-title" output="Index of /"><elem key="title">Index of /</elem>
+</script><script id="http-open-proxy" output="Proxy might be redirecting requests"/><script id="http-server-header" output="nginx/1.22.1"><elem>nginx/1.22.1</elem>
+</script><script id="http-ls" output="Volume /&#xa;SIZE  TIME               FILENAME&#xa;1559  17-Dec-2024 11:31  disable_tls.patch&#xa;875   17-Dec-2024 11:34  havoc.yaotl&#xa;&#xa;"><table key="volumes">
+<table>
+<table key="files">
+<table>
+<elem key="filename">disable_tls.patch</elem>
+<elem key="size">1559</elem>
+<elem key="time">17-Dec-2024 11:31</elem>
+</table>
+<table>
+<elem key="filename">havoc.yaotl</elem>
+<elem key="size">875</elem>
+<elem key="time">17-Dec-2024 11:34</elem>
+</table>
+</table>
+<elem key="volume">/</elem>
+</table>
+</table>
+<table key="total">
+<elem key="files">2</elem>
+<elem key="bytes">2434</elem>
+</table>
+</script></port>
+</ports>
+<times srtt="260262" rttvar="116995" to="728242"/>
+</host>
+<taskbegin task="NSE" time="1737449055"/>
+<taskend task="NSE" time="1737449055"/>
+<taskbegin task="NSE" time="1737449055"/>
+<taskend task="NSE" time="1737449055"/>
+<taskbegin task="NSE" time="1737449055"/>
+<taskend task="NSE" time="1737449055"/>
+<runstats><finished time="1737449055" timestr="Tue Jan 21 14:14:15 2025" summary="Nmap done at Tue Jan 21 14:14:15 2025; 1 IP address (1 host up) scanned in 28.79 seconds" elapsed="28.79" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

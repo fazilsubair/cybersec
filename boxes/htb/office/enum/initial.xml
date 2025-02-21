@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.94SVN scan initiated Mon Jan  6 12:56:37 2025 as: /usr/lib/nmap/nmap -&#45;privileged -vvv -p 53,80,88,139,389,445,443,464,636,593,3268,3269,5985,9389,49664,49669,51142,51149,51170,60594 -sCV -oA enum/initial 10.129.230.226 -->
+<nmaprun scanner="nmap" args="/usr/lib/nmap/nmap -&#45;privileged -vvv -p 53,80,88,139,389,445,443,464,636,593,3268,3269,5985,9389,49664,49669,51142,51149,51170,60594 -sCV -oA enum/initial 10.129.230.226" start="1736148397" startstr="Mon Jan  6 12:56:37 2025" version="7.94SVN" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="20" services="53,80,88,139,389,443,445,464,593,636,3268-3269,5985,9389,49664,49669,51142,51149,51170,60594"/>
+<verbose level="3"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1736148398"/>
+<taskend task="NSE" time="1736148398"/>
+<taskbegin task="NSE" time="1736148398"/>
+<taskend task="NSE" time="1736148398"/>
+<taskbegin task="NSE" time="1736148398"/>
+<taskend task="NSE" time="1736148398"/>
+<taskbegin task="Ping Scan" time="1736148398"/>
+<hosthint><status state="up" reason="unknown-response" reason_ttl="0"/>
+<address addr="10.129.230.226" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<taskend task="Ping Scan" time="1736148398" extrainfo="1 total hosts"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1736148398"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1736148398"/>
+<taskbegin task="SYN Stealth Scan" time="1736148398"/>
+<taskend task="SYN Stealth Scan" time="1736148400" extrainfo="20 total ports"/>
+<taskbegin task="Service scan" time="1736148400"/>
+<taskend task="Service scan" time="1736148460" extrainfo="10 services on 1 host"/>
+<taskbegin task="NSE" time="1736148460"/>
+<taskprogress task="NSE" time="1736148491" percent="99.93" remaining="1" etc="1736148491"/>
+<taskend task="NSE" time="1736148500"/>
+<taskbegin task="NSE" time="1736148500"/>
+<taskend task="NSE" time="1736148502"/>
+<taskbegin task="NSE" time="1736148502"/>
+<taskend task="NSE" time="1736148502"/>
+<host starttime="1736148398" endtime="1736148502"><status state="up" reason="echo-reply" reason_ttl="127"/>
+<address addr="10.129.230.226" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="53"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="domain" product="Simple DNS Plus" ostype="Windows" method="probed" conf="10"><cpe>cpe:/a:jh_software:simple_dns_plus</cpe><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="http" product="Apache httpd" version="2.4.56" extrainfo="(Win64) OpenSSL/1.1.1t PHP/8.0.28" method="probed" conf="10"><cpe>cpe:/a:apache:http_server:2.4.56</cpe></service><script id="http-server-header" output="Apache/2.4.56 (Win64) OpenSSL/1.1.1t PHP/8.0.28"><elem>Apache/2.4.56 (Win64) OpenSSL/1.1.1t PHP/8.0.28</elem>
+</script><script id="http-robots.txt" output="16 disallowed entries &#xa;/joomla/administrator/ /administrator/ /api/ /bin/ &#xa;/cache/ /cli/ /components/ /includes/ /installation/ &#xa;/language/ /layouts/ /libraries/ /logs/ /modules/ /plugins/ /tmp/"/><script id="http-methods" output="&#xa;  Supported Methods: GET HEAD POST OPTIONS"><table key="Supported Methods">
+<elem>GET</elem>
+<elem>HEAD</elem>
+<elem>POST</elem>
+<elem>OPTIONS</elem>
+</table>
+</script><script id="http-favicon" output="Unknown favicon MD5: 1B6942E22443109DAEA739524AB74123"/><script id="http-title" output="Home"><elem key="title">Home</elem>
+</script><script id="http-generator" output="Joomla! - Open Source Content Management"/></port>
+<port protocol="tcp" portid="88"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="kerberos-sec" method="table" conf="3"/></port>
+<port protocol="tcp" portid="139"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="netbios-ssn" product="Microsoft Windows netbios-ssn" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="389"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="ldap" method="table" conf="3"/></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="http" product="Apache httpd" version="2.4.56" extrainfo="OpenSSL/1.1.1t PHP/8.0.28" hostname="www.example.com" tunnel="ssl" method="probed" conf="10"><cpe>cpe:/a:apache:http_server:2.4.56</cpe></service><script id="http-title" output="403 Forbidden"><elem key="title">403 Forbidden</elem>
+</script><script id="http-server-header" output="Apache/2.4.56 (Win64) OpenSSL/1.1.1t PHP/8.0.28"><elem>Apache/2.4.56 (Win64) OpenSSL/1.1.1t PHP/8.0.28</elem>
+</script><script id="ssl-date" output="TLS randomness does not represent time"></script><script id="tls-alpn" output="&#xa;  http/1.1"><elem>http/1.1</elem>
+</script><script id="ssl-cert" output="Subject: commonName=localhost&#xa;Issuer: commonName=localhost&#xa;Public Key type: rsa&#xa;Public Key bits: 1024&#xa;Signature Algorithm: sha1WithRSAEncryption&#xa;Not valid before: 2009-11-10T23:48:47&#xa;Not valid after:  2019-11-08T23:48:47&#xa;MD5:   a0a4:4cc9:9e84:b26f:9e63:9f9e:d229:dee0&#xa;SHA-1: b023:8c54:7a90:5bfa:119c:4e8b:acca:eacf:3649:1ff6&#xa;-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIIBnzCCAQgCCQC1x1LJh4G1AzANBgkqhkiG9w0BAQUFADAUMRIwEAYDVQQDEwls&#xa;b2NhbGhvc3QwHhcNMDkxMTEwMjM0ODQ3WhcNMTkxMTA4MjM0ODQ3WjAUMRIwEAYD&#xa;VQQDEwlsb2NhbGhvc3QwgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBAMEl0yfj&#xa;7K0Ng2pt51+adRAj4pCdoGOVjx1BmljVnGOMW3OGkHnMw9ajibh1vB6UfHxu463o&#xa;J1wLxgxq+Q8y/rPEehAjBCspKNSq+bMvZhD4p8HNYMRrKFfjZzv3ns1IItw46kgT&#xa;gDpAl1cMRzVGPXFimu5TnWMOZ3ooyaQ0/xntAgMBAAEwDQYJKoZIhvcNAQEFBQAD&#xa;gYEAavHzSWz5umhfb/MnBMa5DL2VNzS+9whmmpsDGEG+uR0kM1W2GQIdVHHJTyFd&#xa;aHXzgVJBQcWTwhp84nvHSiQTDBSaT6cQNQpvag/TaED/SEQpm0VqDFwpfFYuufBL&#xa;vVNbLkKxbK2XwUvu0RxoLdBMC/89HqrZ0ppiONuQ+X2MtxE=&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;"><table key="subject">
+<elem key="commonName">localhost</elem>
+</table>
+<table key="issuer">
+<elem key="commonName">localhost</elem>
+</table>
+<table key="pubkey">
+<elem key="type">rsa</elem>
+<elem key="bits">1024</elem>
+<elem key="modulus">C125D327E3ECAD0D836A6DE75F9A751023E2909DA063958F1D419A58D59C638C5B73869079CCC3D6A389B875BC1E947C7C6EE3ADE8275C0BC60C6AF90F32FEB3C47A1023042B2928D4AAF9B32F6610F8A7C1CD60C46B2857E3673BF79ECD4822DC38EA4813803A4097570C4735463D71629AEE539D630E677A28C9A434FF19ED</elem>
+<elem key="exponent">65537</elem>
+</table>
+<elem key="sig_algo">sha1WithRSAEncryption</elem>
+<table key="validity">
+<elem key="notBefore">2009-11-10T23:48:47</elem>
+<elem key="notAfter">2019-11-08T23:48:47</elem>
+</table>
+<elem key="md5">a0a44cc99e84b26f9e639f9ed229dee0</elem>
+<elem key="sha1">b0238c547a905bfa119c4e8baccaeacf36491ff6</elem>
+<elem key="pem">-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIIBnzCCAQgCCQC1x1LJh4G1AzANBgkqhkiG9w0BAQUFADAUMRIwEAYDVQQDEwls&#xa;b2NhbGhvc3QwHhcNMDkxMTEwMjM0ODQ3WhcNMTkxMTA4MjM0ODQ3WjAUMRIwEAYD&#xa;VQQDEwlsb2NhbGhvc3QwgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBAMEl0yfj&#xa;7K0Ng2pt51+adRAj4pCdoGOVjx1BmljVnGOMW3OGkHnMw9ajibh1vB6UfHxu463o&#xa;J1wLxgxq+Q8y/rPEehAjBCspKNSq+bMvZhD4p8HNYMRrKFfjZzv3ns1IItw46kgT&#xa;gDpAl1cMRzVGPXFimu5TnWMOZ3ooyaQ0/xntAgMBAAEwDQYJKoZIhvcNAQEFBQAD&#xa;gYEAavHzSWz5umhfb/MnBMa5DL2VNzS+9whmmpsDGEG+uR0kM1W2GQIdVHHJTyFd&#xa;aHXzgVJBQcWTwhp84nvHSiQTDBSaT6cQNQpvag/TaED/SEQpm0VqDFwpfFYuufBL&#xa;vVNbLkKxbK2XwUvu0RxoLdBMC/89HqrZ0ppiONuQ+X2MtxE=&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;</elem>
+</script></port>
+<port protocol="tcp" portid="445"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="microsoft-ds" method="table" conf="3"/></port>
+<port protocol="tcp" portid="464"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="kpasswd5" method="table" conf="3"/></port>
+<port protocol="tcp" portid="593"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="http-rpc-epmap" method="table" conf="3"/></port>
+<port protocol="tcp" portid="636"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="ldapssl" method="table" conf="3"/></port>
+<port protocol="tcp" portid="3268"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="globalcatLDAP" method="table" conf="3"/></port>
+<port protocol="tcp" portid="3269"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="globalcatLDAPssl" method="table" conf="3"/></port>
+<port protocol="tcp" portid="5985"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="wsman" method="table" conf="3"/></port>
+<port protocol="tcp" portid="9389"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="adws" method="table" conf="3"/></port>
+<port protocol="tcp" portid="49664"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="49669"><state state="filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="tcp" portid="51142"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="ncacn_http" product="Microsoft Windows RPC over HTTP" version="1.0" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="51149"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="51170"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="60594"><state state="filtered" reason="no-response" reason_ttl="0"/></port>
+</ports>
+<hostscript><script id="p2p-conficker" output="&#xa;  Checking for Conficker.C or higher...&#xa;  Check 1 (port 42824/tcp): CLEAN (Timeout)&#xa;  Check 2 (port 52881/tcp): CLEAN (Timeout)&#xa;  Check 3 (port 59956/udp): CLEAN (Timeout)&#xa;  Check 4 (port 57169/udp): CLEAN (Timeout)&#xa;  0/4 checks are positive: Host is CLEAN or ports are blocked&#xa;"/><script id="clock-skew" output="8h00m02s"><elem key="count">1</elem>
+<elem key="stddev">0</elem>
+<elem key="median">28802</elem>
+<elem key="mean">28802</elem>
+</script><script id="smb2-security-mode" output="&#xa;  3:1:1: &#xa;    Message signing enabled and required"><table key="3:1:1">
+<elem>Message signing enabled and required</elem>
+</table>
+</script><script id="smb2-time" output="&#xa;  date: 2025-01-06T15:27:44&#xa;  start_date: N/A"><elem key="date">2025-01-06T15:27:44</elem>
+<elem key="start_date">N/A</elem>
+</script></hostscript><times srtt="222478" rttvar="13728" to="277390"/>
+</host>
+<taskbegin task="NSE" time="1736148502"/>
+<taskend task="NSE" time="1736148502"/>
+<taskbegin task="NSE" time="1736148502"/>
+<taskend task="NSE" time="1736148502"/>
+<taskbegin task="NSE" time="1736148502"/>
+<taskend task="NSE" time="1736148502"/>
+<runstats><finished time="1736148502" timestr="Mon Jan  6 12:58:22 2025" summary="Nmap done at Mon Jan  6 12:58:22 2025; 1 IP address (1 host up) scanned in 105.15 seconds" elapsed="105.15" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

@@ -1,0 +1,47 @@
+# Nmap 7.94SVN scan initiated Thu Jan 23 11:40:42 2025 as: /usr/lib/nmap/nmap --privileged -vvv -p 53,88,135,389,445,464,593,636,3268,3269,5985,9389,49664,49668,49674,49689,49695,51485 -sCV -oA enum/inital 10.129.181.162
+Nmap scan report for 10.129.181.162
+Host is up, received echo-reply ttl 127 (0.16s latency).
+Scanned at 2025-01-23 11:40:43 IST for 103s
+
+PORT      STATE SERVICE       REASON          VERSION
+53/tcp    open  domain        syn-ack ttl 127 Simple DNS Plus
+88/tcp    open  kerberos-sec  syn-ack ttl 127 Microsoft Windows Kerberos (server time: 2025-01-23 06:10:51Z)
+135/tcp   open  msrpc         syn-ack ttl 127 Microsoft Windows RPC
+389/tcp   open  ldap          syn-ack ttl 127 Microsoft Windows Active Directory LDAP (Domain: vintage.htb0., Site: Default-First-Site-Name)
+445/tcp   open  microsoft-ds? syn-ack ttl 127
+464/tcp   open  kpasswd5?     syn-ack ttl 127
+593/tcp   open  ncacn_http    syn-ack ttl 127 Microsoft Windows RPC over HTTP 1.0
+636/tcp   open  tcpwrapped    syn-ack ttl 127
+3268/tcp  open  ldap          syn-ack ttl 127 Microsoft Windows Active Directory LDAP (Domain: vintage.htb0., Site: Default-First-Site-Name)
+3269/tcp  open  tcpwrapped    syn-ack ttl 127
+5985/tcp  open  http          syn-ack ttl 127 Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+|_http-title: Not Found
+|_http-server-header: Microsoft-HTTPAPI/2.0
+9389/tcp  open  mc-nmf        syn-ack ttl 127 .NET Message Framing
+49664/tcp open  msrpc         syn-ack ttl 127 Microsoft Windows RPC
+49668/tcp open  msrpc         syn-ack ttl 127 Microsoft Windows RPC
+49674/tcp open  ncacn_http    syn-ack ttl 127 Microsoft Windows RPC over HTTP 1.0
+49689/tcp open  msrpc         syn-ack ttl 127 Microsoft Windows RPC
+49695/tcp open  msrpc         syn-ack ttl 127 Microsoft Windows RPC
+51485/tcp open  msrpc         syn-ack ttl 127 Microsoft Windows RPC
+Service Info: Host: DC01; OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+| smb2-security-mode: 
+|   3:1:1: 
+|_    Message signing enabled and required
+| p2p-conficker: 
+|   Checking for Conficker.C or higher...
+|   Check 1 (port 64142/tcp): CLEAN (Timeout)
+|   Check 2 (port 26445/tcp): CLEAN (Timeout)
+|   Check 3 (port 12286/udp): CLEAN (Timeout)
+|   Check 4 (port 33278/udp): CLEAN (Timeout)
+|_  0/4 checks are positive: Host is CLEAN or ports are blocked
+| smb2-time: 
+|   date: 2025-01-23T06:11:42
+|_  start_date: N/A
+|_clock-skew: 0s
+
+Read data files from: /usr/share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Thu Jan 23 11:42:26 2025 -- 1 IP address (1 host up) scanned in 103.06 seconds

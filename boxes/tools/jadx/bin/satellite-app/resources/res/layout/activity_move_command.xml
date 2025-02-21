@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center"
+    android:padding="16dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <EditText
+        android:id="@+id/editTextX"
+        android:background="@drawable/edittext_background"
+        android:padding="12dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:hint="X Coordinate"
+        android:layout_centerHorizontal="true"/>
+    <EditText
+        android:id="@+id/editTextY"
+        android:background="@drawable/edittext_background"
+        android:padding="12dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:hint="Y Coordinate"
+        android:layout_below="@+id/editTextX"
+        android:layout_centerHorizontal="true"/>
+    <EditText
+        android:id="@+id/editTextZ"
+        android:background="@drawable/edittext_background"
+        android:padding="12dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:hint="Z Coordinate"
+        android:layout_below="@+id/editTextY"
+        android:layout_centerHorizontal="true"/>
+    <Button
+        android:id="@+id/sendCommandButton"
+        android:background="@drawable/rounded_button"
+        android:padding="12dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Send Command"
+        android:layout_below="@+id/editTextZ"
+        android:layout_centerHorizontal="true"/>
+</RelativeLayout>

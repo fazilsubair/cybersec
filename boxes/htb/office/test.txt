@@ -1,0 +1,13 @@
+          
+SMB         10.129.230.226  445    DC               Administrator                 2023-05-10 19:00:50 0       Built-in account for administering the computer/domain
+SMB         10.129.230.226  445    DC               Guest                         <never>             0       Built-in account for guest access to the computer/domain
+SMB         10.129.230.226  445    DC               krbtgt                        2023-04-14 22:14:59 0       Key Distribution Center Service Account 
+SMB         10.129.230.226  445    DC               PPotts                        2023-05-02 22:44:57 0        
+SMB         10.129.230.226  445    DC               HHogan                        2023-05-06 18:59:34 0        
+SMB         10.129.230.226  445    DC               EWhite                        2023-05-08 00:06:54 0        
+SMB         10.129.230.226  445    DC               etower                        2023-05-08 00:07:38 0        
+SMB         10.129.230.226  445    DC               dwolfe                        2023-05-08 00:09:54 0        
+SMB         10.129.230.226  445    DC               dmichael                      2023-05-08 00:09:01 0        
+SMB         10.129.230.226  445    DC               dlanor                        2023-05-08 00:09:24 0        
+SMB         10.129.230.226  445    DC               tstark                        2023-05-09 01:32:00 0        
+SMB         10.129.230.226  445    DC               web_account                   2024-01-17 17:51:08 0      

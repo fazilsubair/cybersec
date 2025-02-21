@@ -1,0 +1,68 @@
+# Nmap 7.94SVN scan initiated Tue Jan 21 14:13:46 2025 as: /usr/lib/nmap/nmap --privileged -vvv -p 22,443,8000 -sCV -oA enum/initial 10.129.248.17
+Nmap scan report for 10.129.248.17
+Host is up, received syn-ack ttl 63 (0.26s latency).
+Scanned at 2025-01-21 14:13:47 IST for 28s
+
+PORT     STATE SERVICE  REASON         VERSION
+22/tcp   open  ssh      syn-ack ttl 63 OpenSSH 9.2p1 Debian 2+deb12u4 (protocol 2.0)
+| ssh-hostkey: 
+|   256 7d:6b:ba:b6:25:48:77:ac:3a:a2:ef:ae:f5:1d:98:c4 (ECDSA)
+| ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBJuxaL9aCVxiQGLRxQPezW3dkgouskvb/BcBJR16VYjHElq7F8C2ByzUTNr0OMeiwft8X5vJaD9GBqoEul4D1QE=
+|   256 be:f3:27:9e:c6:d6:29:27:7b:98:18:91:4e:97:25:99 (ED25519)
+|_ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIA2oT7Hn4aUiSdg4vO9rJIbVSVKcOVKozd838ZStpwj8
+443/tcp  open  ssl/http syn-ack ttl 63 nginx 1.22.1
+| tls-alpn: 
+|   http/1.1
+|   http/1.0
+|_  http/0.9
+|_http-title: 404 Not Found
+| ssl-cert: Subject: commonName=127.0.0.1/stateOrProvinceName=/countryName=US/localityName=/postalCode=4952/streetAddress=
+| Subject Alternative Name: IP Address:127.0.0.1
+| Issuer: commonName=127.0.0.1/stateOrProvinceName=/countryName=US/localityName=/postalCode=4952/streetAddress=
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha256WithRSAEncryption
+| Not valid before: 2024-10-22T16:31:06
+| Not valid after:  2027-10-22T16:31:06
+| MD5:   4f8d:54f0:9ff9:d805:8e06:b757:b707:469f
+| SHA-1: 03bd:f990:8435:aa06:4046:a25f:18ac:285f:59bf:ec87
+| -----BEGIN CERTIFICATE-----
+| MIIDnzCCAoegAwIBAgIRAIICACIZf/wV1k5ZizZwrOAwDQYJKoZIhvcNAQELBQAw
+| UTELMAkGA1UEBhMCVVMxCTAHBgNVBAgTADEJMAcGA1UEBxMAMQkwBwYDVQQJEwAx
+| DTALBgNVBBETBDQ5NTIxEjAQBgNVBAMTCTEyNy4wLjAuMTAeFw0yNDEwMjIxNjMx
+| MDZaFw0yNzEwMjIxNjMxMDZaMFExCzAJBgNVBAYTAlVTMQkwBwYDVQQIEwAxCTAH
+| BgNVBAcTADEJMAcGA1UECRMAMQ0wCwYDVQQREwQ0OTUyMRIwEAYDVQQDEwkxMjcu
+| MC4wLjEwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQC8vYaBYoWT9WBn
+| GBQwQUgYPBQ+NGnDnLJ3M+V5cHYzFByoyTRHDza7QcIp7d6oGJhzDJW1ntWd2a/L
+| lFU+mc+UFhz9qB40p6qjG4MBM+tKxnmc+SW521stFfW4MoxlXsS0e7YxrNfTnx8V
+| tiobm95/mrRDMNBbrDAPtRiZiJZhBPUrSLltyQKuPya9Bpdpwffo2soRpGkaP3VK
+| y8ZDzSyiL5lxVRtKPWArFVbKDq9lZSljIgdy/rDRYmJxMtuNaaCO45tLhxI8IPrO
+| CRvHdGMR9tNIMn4MWfdwrpVtYtzNRKBaQ6+hPhF9xgB8GcDoOzik+JvBvvV7NeCF
+| AQrJU+/HAgMBAAGjcjBwMA4GA1UdDwEB/wQEAwICpDAdBgNVHSUEFjAUBggrBgEF
+| BQcDAQYIKwYBBQUHAwIwDwYDVR0TAQH/BAUwAwEB/zAdBgNVHQ4EFgQUV89fr+lL
+| oPhQ8izsUuCnt5gz76MwDwYDVR0RBAgwBocEfwAAATANBgkqhkiG9w0BAQsFAAOC
+| AQEAiMlp0U61FmrChvDGER4BpY/XmHzvd9HGr7xToOAWwGHKhAXO9D0HXnYE60H9
+| OtKLr4MfvrFDtPU/QRowRqYgPZhrH5Z+m5tzFwGApf7fKKvxzGIMXZwhTzz1i8N3
+| inNJyQiNJv29YZgesZtXo/IKnXZWiQtLjihYvpHFAE4pn2NW7USGRgOOa0csvYit
+| WqYIjXnLBYowvydNpbwFraD+JShMMoPV86Ug8KaK5amoAKgw8fAG+nJjh7R3rTyZ
+| 4J4TbB0gerRDoHVpfVHfB6s47zOnlSN5t+zBAMTtUSQvG9ivv5YP/k8IAZAYHPvI
+| n3PclSsJzErq4fCpiriNlMCtKw==
+|_-----END CERTIFICATE-----
+|_ssl-date: TLS randomness does not represent time
+|_http-server-header: nginx/1.22.1
+8000/tcp open  http     syn-ack ttl 63 nginx 1.22.1
+| http-methods: 
+|_  Supported Methods: GET HEAD POST
+|_http-title: Index of /
+|_http-open-proxy: Proxy might be redirecting requests
+|_http-server-header: nginx/1.22.1
+| http-ls: Volume /
+| SIZE  TIME               FILENAME
+| 1559  17-Dec-2024 11:31  disable_tls.patch
+| 875   17-Dec-2024 11:34  havoc.yaotl
+|_
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Read data files from: /usr/share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Tue Jan 21 14:14:15 2025 -- 1 IP address (1 host up) scanned in 28.79 seconds

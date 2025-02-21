@@ -1,0 +1,14 @@
+Administrator
+Guest
+krbtgt
+M.Rossi
+R.Verdi
+L.Bianchi
+G.Viola
+C.Neri
+P.Rosa
+svc_sql
+svc_ldap
+svc_ark
+C.Neri_adm
+L.Bianchi_adm

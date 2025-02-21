@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="locations_array">
+        <item>1</item>
+        <item>Uist Way</item>
+        <item>Crop field</item>
+        <item>Clearing</item>
+        <item>Lake</item>
+        <item>Kyle Drive</item>
+        <item>Northwood Path</item>
+    </array>
+</resources>

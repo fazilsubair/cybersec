@@ -1,0 +1,14 @@
+netexec smb 10.129.96.13 -u rose -p KxEPkKe6R8su  --users     
+SMB         10.129.96.13    445    DC01             [*] Windows 10 / Server 2019 Build 17763 x64 (name:DC01) (domain:sequel.htb) (signing:True) (SMBv1:False)
+SMB         10.129.96.13    445    DC01             [+] sequel.htb\rose:KxEPkKe6R8su 
+SMB         10.129.96.13    445    DC01             -Username-                    -Last PW Set-       -BadPW- -Description-                                 
+SMB         10.129.96.13    445    DC01             Administrator                 2024-06-08 16:32:20 0       Built-in account for administering the computer/domain
+SMB         10.129.96.13    445    DC01             Guest                         2024-12-25 14:44:53 0       Built-in account for guest access to the computer/domain
+SMB         10.129.96.13    445    DC01             krbtgt                        2024-06-08 16:40:23 0       Key Distribution Center Service Account 
+SMB         10.129.96.13    445    DC01             michael                       2024-06-08 16:47:37 0        
+SMB         10.129.96.13    445    DC01             ryan                          2024-06-08 16:55:45 0        
+SMB         10.129.96.13    445    DC01             oscar                         2024-06-08 16:56:36 0        
+SMB         10.129.96.13    445    DC01             sql_svc                       2024-06-09 07:58:42 0        
+SMB         10.129.96.13    445    DC01             rose                          2024-12-25 14:44:54 0        
+SMB         10.129.96.13    445    DC01             ca_svc                        2025-01-14 09:42:29 0        
+SMB         10.129.96.13    445    DC01             [*] Enumerated 9 local users: SEQUEL

@@ -1,0 +1,5 @@
+# Nmap 7.94SVN scan initiated Tue Jan 21 14:13:46 2025 as: /usr/lib/nmap/nmap --privileged -vvv -p 22,443,8000 -sCV -oA enum/initial 10.129.248.17
+# Ports scanned: TCP(3;22,443,8000) UDP(0;) SCTP(0;) PROTOCOLS(0;)
+Host: 10.129.248.17 ()	Status: Up
+Host: 10.129.248.17 ()	Ports: 22/open/tcp//ssh//OpenSSH 9.2p1 Debian 2+deb12u4 (protocol 2.0)/, 443/open/tcp//ssl|http//nginx 1.22.1/, 8000/open/tcp//http//nginx 1.22.1/
+# Nmap done at Tue Jan 21 14:14:15 2025 -- 1 IP address (1 host up) scanned in 28.79 seconds

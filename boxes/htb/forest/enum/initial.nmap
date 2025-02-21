@@ -1,0 +1,67 @@
+# Nmap 7.94SVN scan initiated Mon Dec 23 13:14:31 2024 as: /usr/lib/nmap/nmap --privileged -vvv -p 53,88,135,139,389,445,464,593,636,3268,3269,5985,9389,47001,49666,49665,49667,49664,49670,49677,49676,49681,49698 -sCV -oA enum/initial 10.129.104.84
+Nmap scan report for 10.129.104.84
+Host is up, received reset ttl 127 (0.19s latency).
+Scanned at 2024-12-23 13:14:32 IST for 82s
+
+PORT      STATE SERVICE      REASON          VERSION
+53/tcp    open  domain       syn-ack ttl 127 Simple DNS Plus
+88/tcp    open  kerberos-sec syn-ack ttl 127 Microsoft Windows Kerberos (server time: 2024-12-23 07:51:38Z)
+135/tcp   open  msrpc        syn-ack ttl 127 Microsoft Windows RPC
+139/tcp   open  netbios-ssn  syn-ack ttl 127 Microsoft Windows netbios-ssn
+389/tcp   open  ldap         syn-ack ttl 127 Microsoft Windows Active Directory LDAP (Domain: htb.local, Site: Default-First-Site-Name)
+445/tcp   open  microsoft-ds syn-ack ttl 127 Windows Server 2016 Standard 14393 microsoft-ds (workgroup: HTB)
+464/tcp   open  kpasswd5?    syn-ack ttl 127
+593/tcp   open  ncacn_http   syn-ack ttl 127 Microsoft Windows RPC over HTTP 1.0
+636/tcp   open  tcpwrapped   syn-ack ttl 127
+3268/tcp  open  ldap         syn-ack ttl 127 Microsoft Windows Active Directory LDAP (Domain: htb.local, Site: Default-First-Site-Name)
+3269/tcp  open  tcpwrapped   syn-ack ttl 127
+5985/tcp  open  http         syn-ack ttl 127 Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+|_http-server-header: Microsoft-HTTPAPI/2.0
+|_http-title: Not Found
+9389/tcp  open  mc-nmf       syn-ack ttl 127 .NET Message Framing
+47001/tcp open  http         syn-ack ttl 127 Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+|_http-server-header: Microsoft-HTTPAPI/2.0
+|_http-title: Not Found
+49664/tcp open  msrpc        syn-ack ttl 127 Microsoft Windows RPC
+49665/tcp open  msrpc        syn-ack ttl 127 Microsoft Windows RPC
+49666/tcp open  msrpc        syn-ack ttl 127 Microsoft Windows RPC
+49667/tcp open  msrpc        syn-ack ttl 127 Microsoft Windows RPC
+49670/tcp open  msrpc        syn-ack ttl 127 Microsoft Windows RPC
+49676/tcp open  ncacn_http   syn-ack ttl 127 Microsoft Windows RPC over HTTP 1.0
+49677/tcp open  msrpc        syn-ack ttl 127 Microsoft Windows RPC
+49681/tcp open  msrpc        syn-ack ttl 127 Microsoft Windows RPC
+49698/tcp open  msrpc        syn-ack ttl 127 Microsoft Windows RPC
+Service Info: Host: FOREST; OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+| p2p-conficker: 
+|   Checking for Conficker.C or higher...
+|   Check 1 (port 18794/tcp): CLEAN (Couldn't connect)
+|   Check 2 (port 2575/tcp): CLEAN (Couldn't connect)
+|   Check 3 (port 58602/udp): CLEAN (Timeout)
+|   Check 4 (port 25109/udp): CLEAN (Failed to receive data)
+|_  0/4 checks are positive: Host is CLEAN or ports are blocked
+|_clock-skew: mean: 2h46m59s, deviation: 4h37m11s, median: 6m57s
+| smb-os-discovery: 
+|   OS: Windows Server 2016 Standard 14393 (Windows Server 2016 Standard 6.3)
+|   Computer name: FOREST
+|   NetBIOS computer name: FOREST\x00
+|   Domain name: htb.local
+|   Forest name: htb.local
+|   FQDN: FOREST.htb.local
+|_  System time: 2024-12-22T23:52:36-08:00
+| smb2-time: 
+|   date: 2024-12-23T07:52:35
+|_  start_date: 2024-12-23T07:48:47
+| smb2-security-mode: 
+|   3:1:1: 
+|_    Message signing enabled and required
+| smb-security-mode: 
+|   account_used: guest
+|   authentication_level: user
+|   challenge_response: supported
+|_  message_signing: required
+
+Read data files from: /usr/share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Mon Dec 23 13:15:54 2024 -- 1 IP address (1 host up) scanned in 83.05 seconds
