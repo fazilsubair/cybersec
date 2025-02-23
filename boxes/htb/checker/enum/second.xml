@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.95 scan initiated Sun Feb 23 14:25:41 2025 as: /usr/lib/nmap/nmap -&#45;privileged -vvv -p 22,80,8080 -sCV -oA enum/second 10.10.11.56 -->
+<nmaprun scanner="nmap" args="/usr/lib/nmap/nmap -&#45;privileged -vvv -p 22,80,8080 -sCV -oA enum/second 10.10.11.56" start="1740300941" startstr="Sun Feb 23 14:25:41 2025" version="7.95" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="3" services="22,80,8080"/>
+<verbose level="3"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1740300941"/>
+<taskend task="NSE" time="1740300941"/>
+<taskbegin task="NSE" time="1740300941"/>
+<taskend task="NSE" time="1740300941"/>
+<taskbegin task="NSE" time="1740300941"/>
+<taskend task="NSE" time="1740300941"/>
+<taskbegin task="Ping Scan" time="1740300941"/>
+<hosthint><status state="up" reason="unknown-response" reason_ttl="0"/>
+<address addr="10.10.11.56" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<taskend task="Ping Scan" time="1740300942" extrainfo="1 total hosts"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1740300942"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1740300942"/>
+<taskbegin task="SYN Stealth Scan" time="1740300942"/>
+<taskend task="SYN Stealth Scan" time="1740300942" extrainfo="3 total ports"/>
+<taskbegin task="Service scan" time="1740300942"/>
+<taskend task="Service scan" time="1740300950" extrainfo="3 services on 1 host"/>
+<taskbegin task="NSE" time="1740300950"/>
+<taskend task="NSE" time="1740300955"/>
+<taskbegin task="NSE" time="1740300955"/>
+<taskend task="NSE" time="1740300956"/>
+<taskbegin task="NSE" time="1740300956"/>
+<taskend task="NSE" time="1740300956"/>
+<host starttime="1740300942" endtime="1740300956"><status state="up" reason="reset" reason_ttl="63"/>
+<address addr="10.10.11.56" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="ssh" product="OpenSSH" version="8.9p1 Ubuntu 3ubuntu0.10" extrainfo="Ubuntu Linux; protocol 2.0" ostype="Linux" method="probed" conf="10"><cpe>cpe:/a:openbsd:openssh:8.9p1</cpe><cpe>cpe:/o:linux:linux_kernel</cpe></service><script id="ssh-hostkey" output="&#xa;  256 aa:54:07:41:98:b8:11:b0:78:45:f1:ca:8c:5a:94:2e (ECDSA)&#xa;ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBNQsMcD52VU4FwV2qhq65YVV9Flp7+IUAUrkugU+IiOs5ph+Rrqa4aofeBosUCIziVzTUB/vNQwODCRSTNBvdXQ=&#xa;  256 8f:2b:f3:22:1e:74:3b:ee:8b:40:17:6c:6c:b1:93:9c (ED25519)&#xa;ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIIRBr02nNGqdVIlkXK+vsFIdhcYJoWEVqAIvGCGz+nHY"><table>
+<elem key="bits">256</elem>
+<elem key="key">AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBNQsMcD52VU4FwV2qhq65YVV9Flp7+IUAUrkugU+IiOs5ph+Rrqa4aofeBosUCIziVzTUB/vNQwODCRSTNBvdXQ=</elem>
+<elem key="fingerprint">aa54074198b811b07845f1ca8c5a942e</elem>
+<elem key="type">ecdsa-sha2-nistp256</elem>
+</table>
+<table>
+<elem key="bits">256</elem>
+<elem key="key">AAAAC3NzaC1lZDI1NTE5AAAAIIRBr02nNGqdVIlkXK+vsFIdhcYJoWEVqAIvGCGz+nHY</elem>
+<elem key="fingerprint">8f2bf3221e743bee8b40176c6cb1939c</elem>
+<elem key="type">ssh-ed25519</elem>
+</table>
+</script></port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="http" product="Apache httpd" method="probed" conf="10"><cpe>cpe:/a:apache:http_server</cpe></service><script id="http-server-header" output="Apache"><elem>Apache</elem>
+</script></port>
+<port protocol="tcp" portid="8080"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="http" product="Apache httpd" method="probed" conf="10"><cpe>cpe:/a:apache:http_server</cpe></service><script id="http-server-header" output="Apache"><elem>Apache</elem>
+</script><script id="http-methods" output="&#xa;  Supported Methods: GET HEAD POST OPTIONS"><table key="Supported Methods">
+<elem>GET</elem>
+<elem>HEAD</elem>
+<elem>POST</elem>
+<elem>OPTIONS</elem>
+</table>
+</script><script id="http-title" output="403 Forbidden"><elem key="title">403 Forbidden</elem>
+</script></port>
+</ports>
+<times srtt="76478" rttvar="32287" to="205626"/>
+</host>
+<taskbegin task="NSE" time="1740300956"/>
+<taskend task="NSE" time="1740300956"/>
+<taskbegin task="NSE" time="1740300956"/>
+<taskend task="NSE" time="1740300956"/>
+<taskbegin task="NSE" time="1740300956"/>
+<taskend task="NSE" time="1740300956"/>
+<runstats><finished time="1740300956" timestr="Sun Feb 23 14:25:56 2025" summary="Nmap done at Sun Feb 23 14:25:56 2025; 1 IP address (1 host up) scanned in 14.42 seconds" elapsed="14.42" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>
