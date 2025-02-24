@@ -1,0 +1,3 @@
+#!/home/xot/Desktop/learning/boxes/tools/Certipy/myenv/bin/python3
+import ldapdomaindump
+ldapdomaindump.main()

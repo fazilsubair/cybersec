@@ -1,0 +1,16 @@
+cloudgoat_output_aws_account_id = "481665105175"                                                                                                            
+cloudgoat_output_policy_arn = "arn:aws:iam::481665105175:policy/cg-raynor-policy-iam_privesc_by_rollback_cgidx2t3cnzbda"                                    
+cloudgoat_output_raynor_access_key_id = "AKIAXAJL2HUL7O6VBHO6"                                                                                              
+cloudgoat_output_raynor_secret_key = <sensitive>                                                                                                            
+cloudgoat_output_username = "raynor-iam_privesc_by_rollback_cgidx2t3cnzbda"                                                                                 
+                                                                                                                                                            
+[cloudgoat] terraform apply completed with no error code.                                                                                                   
+                                                                                                                                                            
+[cloudgoat] terraform output completed with no error code.                                                                                                  
+cloudgoat_output_aws_account_id = 481665105175                                                                                                              
+cloudgoat_output_policy_arn = arn:aws:iam::481665105175:policy/cg-raynor-policy-iam_privesc_by_rollback_cgidx2t3cnzbda                                      
+cloudgoat_output_raynor_access_key_id = AKIAXAJL2HUL7O6VBHO6                                                                                                
+cloudgoat_output_raynor_secret_key = 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                                                                               
+cloudgoat_output_username = raynor-iam_privesc_by_rollback_cgidx2t3cnzbda                                                                                   
+                                                                                                                                                            
+[cloudgoat] Output file written to:                                                            
