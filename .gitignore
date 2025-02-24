@@ -3,3 +3,5 @@
 *.dmp
 *.bin
 boxes/tools/jadx/lib/jadx-1.5.1-all.jar
+boxes/htb/crafty/log4j-shell-poc/jdk1.8.0_181/jre/lib/rt.jar
+boxes/htb/crafty/log4j-shell-poc/jdk1.8.0_181/jre/lib/amd64/libjfxwebkit.so
