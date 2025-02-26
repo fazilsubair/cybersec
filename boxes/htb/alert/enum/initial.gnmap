@@ -1,0 +1,5 @@
+# Nmap 7.95 scan initiated Wed Feb 26 14:59:51 2025 as: /usr/lib/nmap/nmap --privileged -vvv -p 22,80 -A -oA enum/initial 10.10.11.44
+# Ports scanned: TCP(2;22,80) UDP(0;) SCTP(0;) PROTOCOLS(0;)
+Host: 10.10.11.44 ()	Status: Up
+Host: 10.10.11.44 ()	Ports: 22/open/tcp//ssh//OpenSSH 8.2p1 Ubuntu 4ubuntu0.11 (Ubuntu Linux; protocol 2.0)/, 80/open/tcp//http//Apache httpd 2.4.41 ((Ubuntu))/	OS: Linux 4.15 - 5.19|MikroTik RouterOS 7.2 - 7.5 (Linux 5.6.3)	Seq Index: 262	IP ID Seq: All zeros
+# Nmap done at Wed Feb 26 15:00:03 2025 -- 1 IP address (1 host up) scanned in 12.67 seconds
