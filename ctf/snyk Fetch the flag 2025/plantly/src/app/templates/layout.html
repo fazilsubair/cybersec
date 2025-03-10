@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Plantly{% endblock %}</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Plantly</h1>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/plants">Browse Our Plants</a>
+            <a href="/subscription">Subscription</a>
+            {% if session.get("user_id") %}
+            <a href="/my-subscription">My Subscription</a>
+            <a href="/cart">Cart{% if session.get("cart_count") %} ({{ session["cart_count"] }}){% endif %}</a>
+            <span class="navbar-right">
+                <a href="/my-subscription">{{ session.get("user_name") }}</a>
+                <a href="/logout">Logout</a>
+            </span>
+            {% else %}
+            <a href="/signin">Sign In</a>
+            <a href="/register">Register</a>
+            {% endif %}
+        </nav>
+    </header>
+
+    <!-- Flash Messages -->
+    {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+    <div class="flash-messages">
+        {% for category, message in messages %}
+        <div class="flash-message {{ category }}">{{ message }}</div>
+        {% endfor %}
+    </div>
+    {% endif %}
+    {% endwith %}
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+    <footer>
+        <p>&copy; 2025 Plantly. Bringing plants to your door, every week.</p>
+    </footer>
+</body>
+
+</html>

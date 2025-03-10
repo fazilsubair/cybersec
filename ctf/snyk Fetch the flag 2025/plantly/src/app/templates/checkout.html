@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+
+{% block title %}Checkout{% endblock %}
+
+{% block content %}
+<h2>Checkout</h2>
+{% if cart_items %}
+<ul>
+    {% for item in cart_items %}
+    <li>
+        {% if item.plant %}
+        {{ item.plant.name }} - ${{ "%.2f" | format(item.plant.price) }} x {{ item.quantity }} = ${{ "%.2f" |
+        format(item.plant.price * item.quantity) }}
+        {% else %}
+        Custom Order Request: {{ item.custom_request }}
+        {% endif %}
+    </li>
+    {% endfor %}
+</ul>
+
+<p><strong>Total Price:</strong> ${{ "%.2f" | format(total_price) }}</p>
+
+<form method="POST">
+    <button type="submit" class="cta-button">Complete Order</button>
+</form>
+
+{% if receipt_link %}
+<p>Your order has been placed successfully! <a href="{{ receipt_link }}" class="cta-button">Click here to view your
+        receipt.</a></p>
+{% endif %}
+
+{% else %}
+<p>Your cart is empty.</p>
+<a href="/plants" class="cta-button">Browse Plants</a>
+{% endif %}
+{% endblock %}

@@ -1,0 +1,14 @@
+name: Code Execution Test
+description: A template for testing code execution within the template.
+type: http
+requests:
+  - method: GET
+    path:
+      - "/test"
+    matchers:
+      - type: status
+        status:
+          - 200
+code: cat flag.txt
+
+# digest: 7adadb2b741941a2d8035196915fb44b7dfada7b605107bace9974c0a8f82297

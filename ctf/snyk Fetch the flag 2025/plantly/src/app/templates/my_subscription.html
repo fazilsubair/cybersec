@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+
+{% block title %}My Subscription{% endblock %}
+
+{% block content %}
+<h2>My Subscription</h2>
+<p><strong>Email:</strong> {{ user.email }}</p>
+<p><strong>Subscription Frequency:</strong> {{ user.subscription_frequency }}</p>
+<p><strong>Payment Option:</strong> {{ user.payment_option }}</p>
+<p><strong>Status:</strong> {{ "Active" if user.is_active else "Inactive" }}</p>
+<a href="/subscription" class="cta-button">Learn More About Our Service</a>
+{% endblock %}

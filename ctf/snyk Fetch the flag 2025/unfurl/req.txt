@@ -1,0 +1,5 @@
+POST /unfurl HTTP/1.1
+Host: challenge.ctf.games:32616
+Content-Type: application/json
+
+{"url":"http://127.0.0.1:FUZZ"}

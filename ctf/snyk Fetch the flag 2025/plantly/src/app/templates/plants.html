@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+
+{% block title %}Browse Our Plants{% endblock %}
+
+{% block content %}
+<h2>Browse Our Plants</h2>
+<div class="plants-container">
+    {% for plant in plants %}
+    <div class="plant-card">
+        <img src="{{ plant.image_url }}" alt="{{ plant.name }}" class="plant-image">
+        <h3>{{ plant.name }}</h3>
+        <p>${{ "%.2f"|format(plant.price) }}</p>
+        <form method="POST" action="{{ url_for('store.add_to_cart', plant_id=plant.id) }}">
+            <button type="submit" class="cta-button">Add to Cart</button>
+        </form>
+    </div>
+    {% endfor %}
+    <div class="plant-card">
+        <form method="POST" action="{{ url_for('store.add_to_cart', plant_id='custom_order') }}">
+            <label for="custom_request">Custom Order (enter your request):</label>
+            <input type="text" id="custom_request" name="custom_request" placeholder="e.g., Custom Bonsai Tree">
+            <button type="submit" class="cta-button">Add Custom Order to Cart</button>
+        </form>
+    </div>
+</div>
+{% endblock %}

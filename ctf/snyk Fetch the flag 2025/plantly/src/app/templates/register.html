@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+
+{% block title %}Register{% endblock %}
+
+{% block content %}
+<h2>Create an Account</h2>
+<form method="POST">
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required>
+    <button type="submit" class="cta-button">Register</button>
+</form>
+<p>Already have an account? <a href="/signin">Sign in</a></p>
+{% endblock %}

@@ -1,0 +1,10 @@
+{% extends "layout.html" %}
+
+{% block title %}Subscription Confirmed{% endblock %}
+
+{% block content %}
+<h2>Subscription Confirmed!</h2>
+<p>Thank you for subscribing, <strong>{{ email }}</strong>!</p>
+<p>Your plants will be delivered <strong>{{ frequency }}</strong>.</p>
+<p><a href="/">Go back to Home</a></p>
+{% endblock %}

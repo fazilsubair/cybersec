@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+
+{% block title %}Subscription Service{% endblock %}
+
+{% block content %}
+<h2>About Our Subscription Service</h2>
+<p>
+    Join Plantly and get fresh, healthy plants delivered to your door.
+    Our subscription service offers flexible delivery options to suit your lifestyle.
+</p>
+<ul>
+    <li>Weekly, bi-weekly, or monthly delivery options</li>
+    <li>Choose from a variety of beautiful plants</li>
+    <li>Hassle-free subscription management</li>
+</ul>
+{% if session.get("user_id") %}
+<p><a href="/my-subscription" class="cta-button">View My Subscription</a></p>
+{% else %}
+<p><a href="/register" class="cta-button">Sign Up Now</a></p>
+{% endif %}
+{% endblock %}
