@@ -1,0 +1,23 @@
+Foremost version 1.5.7 by Jesse Kornblum, Kris Kendall, and Nick Mikus
+Audit File
+
+Foremost started at Sun Mar 30 16:28:33 2025
+Invocation: foremost double-exposure.png 
+Output directory: /home/xot/Desktop/cybersec/ctf/swamp ctf/pretty picture/output
+Configuration file: /etc/foremost.conf
+------------------------------------------------------------------
+File: double-exposure.png
+Start: Sun Mar 30 16:28:33 2025
+Length: 5 KB (5943 bytes)
+ 
+Num	 Name (bs=512)	       Size	 File Offset	 Comment 
+
+0:	00000000.png 	       5 KB 	          0 	  (200 x 200)
+Finish: Sun Mar 30 16:28:33 2025
+
+1 FILES EXTRACTED
+	
+png:= 1
+------------------------------------------------------------------
+
+Foremost finished at Sun Mar 30 16:28:33 2025

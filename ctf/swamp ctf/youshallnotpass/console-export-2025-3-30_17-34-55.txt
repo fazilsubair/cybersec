@@ -1,0 +1,13 @@
+This page is in Quirks Mode. Page layout may be impacted. For Standards Mode use “<!DOCTYPE html>”. dashboard.php
+User Status Updated: 
+Object { status: "error", message: "Invalid action specified." }
+dashboard.php:48:25
+System Logs: 
+Object { status: "error", message: "Invalid action specified." }
+dashboard.php:38:25
+System Logs: 
+Object { status: "error", message: "Invalid action specified." }
+dashboard.php:38:25
+User Status Updated: 
+Object { status: "error", message: "Invalid action specified." }
+dashboard.php:48:25
