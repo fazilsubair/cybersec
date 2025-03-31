@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.95 scan initiated Thu Mar 20 16:36:53 2025 as: /usr/lib/nmap/nmap -&#45;privileged -vvv -p 22,80 -A -oA enum/initial 10.10.11.58 -->
+<nmaprun scanner="nmap" args="/usr/lib/nmap/nmap -&#45;privileged -vvv -p 22,80 -A -oA enum/initial 10.10.11.58" start="1742468813" startstr="Thu Mar 20 16:36:53 2025" version="7.95" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="2" services="22,80"/>
+<verbose level="3"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1742468813"/>
+<taskend task="NSE" time="1742468813"/>
+<taskbegin task="NSE" time="1742468813"/>
+<taskend task="NSE" time="1742468813"/>
+<taskbegin task="NSE" time="1742468813"/>
+<taskend task="NSE" time="1742468813"/>
+<taskbegin task="Ping Scan" time="1742468813"/>
+<hosthint><status state="up" reason="unknown-response" reason_ttl="0"/>
+<address addr="10.10.11.58" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<taskend task="Ping Scan" time="1742468814" extrainfo="1 total hosts"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1742468814"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1742468814"/>
+<taskbegin task="SYN Stealth Scan" time="1742468814"/>
+<taskend task="SYN Stealth Scan" time="1742468814" extrainfo="2 total ports"/>
+<taskbegin task="Service scan" time="1742468814"/>
+<taskend task="Service scan" time="1742468835" extrainfo="2 services on 1 host"/>
+<taskbegin task="Traceroute" time="1742468840"/>
+<taskend task="Traceroute" time="1742468840"/>
+<taskbegin task="Parallel DNS resolution of 2 hosts." time="1742468840"/>
+<taskend task="Parallel DNS resolution of 2 hosts." time="1742468840"/>
+<taskbegin task="NSE" time="1742468841"/>
+<taskprogress task="NSE" time="1742468872" percent="98.95" remaining="1" etc="1742468872"/>
+<taskprogress task="NSE" time="1742468902" percent="99.65" remaining="1" etc="1742468902"/>
+<taskend task="NSE" time="1742468919"/>
+<taskbegin task="NSE" time="1742468919"/>
+<taskend task="NSE" time="1742468933"/>
+<taskbegin task="NSE" time="1742468933"/>
+<taskend task="NSE" time="1742468933"/>
+<host starttime="1742468814" endtime="1742468933"><status state="up" reason="reset" reason_ttl="63"/>
+<address addr="10.10.11.58" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="ssh" product="OpenSSH" version="8.2p1 Ubuntu 4ubuntu0.12" extrainfo="Ubuntu Linux; protocol 2.0" ostype="Linux" method="probed" conf="10"><cpe>cpe:/a:openbsd:openssh:8.2p1</cpe><cpe>cpe:/o:linux:linux_kernel</cpe></service><script id="ssh-hostkey" output="&#xa;  3072 97:2a:d2:2c:89:8a:d3:ed:4d:ac:00:d2:1e:87:49:a7 (RSA)&#xa;ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDEJsqBRTZaxqvLcuvWuqOclXU1uxwUJv98W1TfLTgTYqIBzWAqQR7Y6fXBOUS6FQ9xctARWGM3w3AeDw+MW0j+iH83gc9J4mTFTBP8bXMgRqS2MtoeNgKWozPoy6wQjuRSUammW772o8rsU2lFPq3fJCoPgiC7dR4qmrWvgp5TV8GuExl7WugH6/cTGrjoqezALwRlKsDgmAl6TkAaWbCC1rQ244m58ymadXaAx5I5NuvCxbVtw32/eEuyqu+bnW8V2SdTTtLCNOe1Tq0XJz3mG9rw8oFH+Mqr142h81jKzyPO/YrbqZi2GvOGF+PNxMg+4kWLQ559we+7mLIT7ms0esal5O6GqIVPax0K21+GblcyRBCCNkawzQCObo5rdvtELh0CPRkBkbOPo4CfXwd/DxMnijXzhR/lCLlb2bqYUMDxkfeMnmk8HRF+hbVQefbRC/+vWf61o2l0IFEr1IJo3BDtJy5m2IcWCeFX3ufk5Fme8LTzAsk6G9hROXnBZg8=&#xa;  256 27:7c:3c:eb:0f:26:e9:62:59:0f:0f:b1:38:c9:ae:2b (ECDSA)&#xa;ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBM/NEdzq1MMEw7EsZsxWuDa+kSb+OmiGvYnPofRWZOOMhFgsGIWfg8KS4KiEUB2IjTtRovlVVot709BrZnCvU8Y=&#xa;  256 93:88:47:4c:69:af:72:16:09:4c:ba:77:1e:3b:3b:eb (ED25519)&#xa;ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIPMpkoATGAIWQVbEl67rFecNZySrzt944Y/hWAyq4dPc"><table>
+<elem key="fingerprint">972ad22c898ad3ed4dac00d21e8749a7</elem>
+<elem key="bits">3072</elem>
+<elem key="type">ssh-rsa</elem>
+<elem key="key">AAAAB3NzaC1yc2EAAAADAQABAAABgQDEJsqBRTZaxqvLcuvWuqOclXU1uxwUJv98W1TfLTgTYqIBzWAqQR7Y6fXBOUS6FQ9xctARWGM3w3AeDw+MW0j+iH83gc9J4mTFTBP8bXMgRqS2MtoeNgKWozPoy6wQjuRSUammW772o8rsU2lFPq3fJCoPgiC7dR4qmrWvgp5TV8GuExl7WugH6/cTGrjoqezALwRlKsDgmAl6TkAaWbCC1rQ244m58ymadXaAx5I5NuvCxbVtw32/eEuyqu+bnW8V2SdTTtLCNOe1Tq0XJz3mG9rw8oFH+Mqr142h81jKzyPO/YrbqZi2GvOGF+PNxMg+4kWLQ559we+7mLIT7ms0esal5O6GqIVPax0K21+GblcyRBCCNkawzQCObo5rdvtELh0CPRkBkbOPo4CfXwd/DxMnijXzhR/lCLlb2bqYUMDxkfeMnmk8HRF+hbVQefbRC/+vWf61o2l0IFEr1IJo3BDtJy5m2IcWCeFX3ufk5Fme8LTzAsk6G9hROXnBZg8=</elem>
+</table>
+<table>
+<elem key="fingerprint">277c3ceb0f26e962590f0fb138c9ae2b</elem>
+<elem key="bits">256</elem>
+<elem key="type">ecdsa-sha2-nistp256</elem>
+<elem key="key">AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBM/NEdzq1MMEw7EsZsxWuDa+kSb+OmiGvYnPofRWZOOMhFgsGIWfg8KS4KiEUB2IjTtRovlVVot709BrZnCvU8Y=</elem>
+</table>
+<table>
+<elem key="fingerprint">9388474c69af7216094cba771e3b3beb</elem>
+<elem key="bits">256</elem>
+<elem key="type">ssh-ed25519</elem>
+<elem key="key">AAAAC3NzaC1lZDI1NTE5AAAAIPMpkoATGAIWQVbEl67rFecNZySrzt944Y/hWAyq4dPc</elem>
+</table>
+</script></port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="http" product="Apache/2.4.41 (Ubuntu)" method="probed" conf="10"/><script id="http-methods" output="&#xa;  Supported Methods: HEAD OPTIONS"><table key="Supported Methods">
+<elem>HEAD</elem>
+<elem>OPTIONS</elem>
+</table>
+</script><script id="http-server-header" output="Apache/2.4.41 (Ubuntu)"><elem>Apache/2.4.41 (Ubuntu)</elem>
+</script><script id="http-title" output="Home | Dog"><elem key="title">Home | Dog</elem>
+</script><script id="http-robots.txt" output="22 disallowed entries &#xa;/core/ /profiles/ /README.md /web.config /admin &#xa;/comment/reply /filter/tips /node/add /search /user/register &#xa;/user/password /user/login /user/logout /?q=admin /?q=comment/reply &#xa;/?q=filter/tips /?q=node/add /?q=search /?q=user/password &#xa;/?q=user/register /?q=user/login /?q=user/logout"/><script id="http-generator" output="Backdrop CMS 1 (https://backdropcms.org)"/><script id="http-favicon" output="Unknown favicon MD5: 3836E83A3E835A26D789DDA9E78C5510"/><script id="http-git" output="&#xa;  10.10.11.58:80/.git/&#xa;    Git repository found!&#xa;    Repository description: Unnamed repository; edit this file &apos;description&apos; to name the...&#xa;    Last commit message: todo: customize url aliases.  reference:https://docs.backdro...&#xa;"><table key="10.10.11.58:80/.git/">
+<table key="files-found">
+<elem key=".gitignore">false</elem>
+<elem key=".git/COMMIT_EDITMSG">true</elem>
+<elem key=".git/description">true</elem>
+<elem key=".git/config">true</elem>
+<elem key=".git/info/exclude">true</elem>
+</table>
+<elem key="last-commit-message">todo: customize url aliases.  reference:https://docs.backdropcms.org/documentation/url-aliases&#xa;</elem>
+<elem key="repository-description">Unnamed repository; edit this file &apos;description&apos; to name the repository.&#xa;</elem>
+</table>
+</script></port>
+</ports>
+<os><portused state="open" proto="tcp" portid="22"/>
+<portused state="closed" proto="udp" portid="39366"/>
+<osmatch name="Linux 4.15 - 5.19" accuracy="100" line="70534">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="4.X" accuracy="100"><cpe>cpe:/o:linux:linux_kernel:4</cpe></osclass>
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="5.X" accuracy="100"><cpe>cpe:/o:linux:linux_kernel:5</cpe></osclass>
+</osmatch>
+<osmatch name="MikroTik RouterOS 7.2 - 7.5 (Linux 5.6.3)" accuracy="100" line="91792">
+<osclass type="router" vendor="MikroTik" osfamily="RouterOS" osgen="7.X" accuracy="100"><cpe>cpe:/o:mikrotik:routeros:7</cpe></osclass>
+<osclass type="router" vendor="Linux" osfamily="Linux" osgen="5.X" accuracy="100"><cpe>cpe:/o:linux:linux_kernel:5.6.3</cpe></osclass>
+</osmatch>
+<osfingerprint fingerprint="OS:SCAN(V=7.95%E=4%D=3/20%OT=22%CT=%CU=39366%PV=Y%DS=2%DC=T%G=N%TM=67DBF745&#xa;OS:%P=x86_64-pc-linux-gnu)SEQ(SP=107%GCD=1%ISR=108%TI=Z%CI=Z%II=I)SEQ(SP=FD&#xa;OS:%GCD=1%ISR=10D%TI=Z%CI=Z%TS=8)OPS(O1=M552ST11NW7%O2=M552ST11NW7%O3=M552N&#xa;OS:NT11NW7%O4=M552ST11NW7%O5=M552ST11NW7%O6=M552ST11)WIN(W1=FE88%W2=FE88%W3&#xa;OS:=FE88%W4=FE88%W5=FE88%W6=FE88)ECN(R=Y%DF=Y%T=40%W=FAF0%O=M552NNSNW7%CC=Y&#xa;OS:%Q=)T1(R=Y%DF=Y%T=40%S=O%A=S+%F=AS%RD=0%Q=)T2(R=N)T3(R=N)T4(R=Y%DF=Y%T=4&#xa;OS:0%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)T5(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%&#xa;OS:Q=)T6(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)T7(R=Y%DF=Y%T=40%W=0%S=Z%&#xa;OS:A=S+%F=AR%O=%RD=0%Q=)U1(R=Y%DF=N%T=40%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=G%&#xa;OS:RUCK=G%RUD=G)IE(R=Y%DFI=N%T=40%CD=S)&#xa;"/>
+</os>
+<uptime seconds="95" lastboot="Thu Mar 20 16:37:18 2025"/>
+<distance value="2"/>
+<tcpsequence index="263" difficulty="Good luck!" values="281D44AE,E03AB3B1,E29250A9,F3AEA63,99ADA83A,85FF4028"/>
+<ipidsequence class="All zeros" values="0,0,0,0,0,0"/>
+<tcptssequence class="unknown class" values="2D4CBAEE,2D4CBAEE,2D4CBAEE,2D4CBAEE,2D4CBAEE,2D4CBAEE"/>
+<trace port="443" proto="tcp">
+<hop ttl="1" ipaddr="10.10.14.1" rtt="83.51"/>
+<hop ttl="2" ipaddr="10.10.11.58" rtt="83.59"/>
+</trace>
+<times srtt="91986" rttvar="14935" to="151726"/>
+</host>
+<taskbegin task="NSE" time="1742468933"/>
+<taskend task="NSE" time="1742468933"/>
+<taskbegin task="NSE" time="1742468933"/>
+<taskend task="NSE" time="1742468933"/>
+<taskbegin task="NSE" time="1742468933"/>
+<taskend task="NSE" time="1742468933"/>
+<runstats><finished time="1742468933" timestr="Thu Mar 20 16:38:53 2025" summary="Nmap done at Thu Mar 20 16:38:53 2025; 1 IP address (1 host up) scanned in 119.88 seconds" elapsed="119.88" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>
