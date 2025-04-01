@@ -1,0 +1,46 @@
+C:\Users\fazil.s>cmdkey /list
+
+Currently stored credentials:
+
+    Target: MicrosoftAccount:target=SSO_POP_Device
+    Type: Generic
+    User: 02hqvdvufleierol
+    Saved for this logon only
+
+    Target: LegacyGeneric:target=Olk/PushNotificationsBackupKey
+    Type: Generic
+    User: Olk/PushNotificationsBackupKey
+    Local machine persistence
+
+    Target: LegacyGeneric:target=git:https://github.com
+    Type: Generic
+    User: fazilsubair
+    Local machine persistence
+
+    Target: LegacyGeneric:target=d8969160-ee39-4dc1-b9c2-7186b55aa369
+    Type: Generic
+    Local machine persistence
+
+    Target: WindowsLive:target=virtualapp/didlogical
+    Type: Generic
+    User: 02hqvdvufleierol
+    Local machine persistence
+
+    Target: LegacyGeneric:target=Olk/PushNotificationsKey
+    Type: Generic
+    User: Olk/PushNotificationsKey
+    Local machine persistence
+
+    Target: LegacyGeneric:target=Microsoft_OneDrive_Cookies_v2_Business1_https://experiontechnologies-my.sharepoint.com/
+    Type: Generic
+    Local machine persistence
+
+    Target: LegacyGeneric:target=Oracle|mysql-secret-store-windows-credential|password|root@localhost:3306
+    Type: Generic
+
+    Target: Domain:target=192.168.4.1
+    Type: Domain Password
+    User: EXPERIONGLOBAL\user
+
+
+C:\Users\fazil.s>
